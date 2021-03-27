@@ -14,7 +14,7 @@
 
 html {
   font-family: 'Open Sans', sans-serif;
-  background-color: #E5E5E5;
+  background-color: white;
 }
 
 /*лист без точек*/
@@ -33,32 +33,62 @@ h1 {
   margin: 0px;
 }
 
+.display-none {
+  display: none;
+}
 
-
-/* 1920 - 1770 */
 .container {
 	width: 100%;
-  padding-left: 75px;
-  padding-right: 75px;
+  padding-left: 160px;
+  padding-right: 160px;
 }
 
 
 
 /*Header*/
 
-
+.header-container {
+  background-color: black;
+}
 
 /* Sections*/
 
+.section-heading {
 
+}
 
-/* hero*/
+/* Hero*/
 
+.section-hero-menu {
+  background-color: rgba(0, 0, 0, 0.4);
+}
 
 
 /*About*/
 
 
+/*Gallery*/
+
+.section-gallery {
+  background-image: url('/img/Gallery-base.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-container {
+
+}
+
+.gallery-filter {
+
+}
+
+.gallery-slider {
+
+}
+
+
+/* Catalogue */
 
 
 
@@ -72,7 +102,8 @@ h1 {
 @media (min-width: 1921px) {
 
   .container {
-
+    padding-left: 8.3vw;
+    padding-right: 8.3vw;
   }
 
 
