@@ -39,8 +39,10 @@ h1 {
 
 .container {
 	width: 100%;
-  padding-left: 160px;
-  padding-right: 160px;
+  padding-left: 8.3vw;
+  padding-right: 8.3vw;
+  /* padding-left: 160px;
+  padding-right: 160px; */
 }
 
 
@@ -48,8 +50,63 @@ h1 {
 /*Header*/
 
 .header-container {
+  display: flex;
+  height: 100px;
   background-color: black;
 }
+
+.header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header-logo {
+  width: 188px;
+  height: 42px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 40px;
+  width: 1250px;
+}
+
+.nav-menu-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-menu-item:not(:last-child) {
+  margin-right: 3.2vw;
+}
+
+.nav-menu-item-link {
+  font-size: 19px;
+  line-height: 2px;
+  font-weight: 500;
+  color: white;
+}
+
+.header-nav-login {
+  margin-left: 20px;
+  padding-left: 20px;
+  background: url('/img/login.svg') left no-repeat;
+}
+
+.header-nav-login-link {
+  font-size: 18px;
+  font-weight: normal;
+  color: white;
+}
+
+.search-full {
+  display: none;
+}
+
 
 /* Sections*/
 
@@ -132,7 +189,16 @@ h1 {
 @media (max-width: 1024px) {
 
   .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 
+  .header-nav {
+    display: none;
+  }
+
+  .search-full {
+    display: flex;
   }
 }
 
@@ -140,10 +206,26 @@ h1 {
 
 @media (max-width: 768px) {
 
+  .container {
+    padding-left: 6.5vw;
+    padding-right: 6.5vw;
+  }
+
+  .header-container {
+    height: 13vw;
+  }
 
 }
 
 @media (max-width: 320px) {
 
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .header-container {
+    height: 45px;
+  }
 
 }
