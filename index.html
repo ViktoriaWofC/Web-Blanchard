@@ -9,7 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"/>
+
     <link rel="stylesheet" href="/css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
     <script src="/js/script.js"></script>
 
 </head>
@@ -190,13 +195,24 @@
             Галерея
           </h1>
 
-          <label for="select-filter">
-            <select name="" id="select-filter">
-              <option value="">Автор</option>
-              <option value="">Направление</option>
-              <option value="">Техника</option>
-            </select>
-          </label>
+          <div class="gallery-filter-selector">
+            <label for="select" class="gallery-filter-selector-label">
+              Фильтровать по:
+              <select name="select" id="select-filter" class="js-choice">
+                <option>Автор</option>
+                <option>Направление</option>
+                <option>Техника</option>
+              </select>
+            </label>
+
+            <script>
+              const element = document.querySelector('.js-choice');
+              const choices = new Choices(element, {
+                searchEnabled: false,
+                itemSelectText: ''
+              });
+            </script>
+          </div>
 
           <div class="gallery-filter-condition">
             Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a href="">
@@ -211,7 +227,7 @@
       </div>
     </section>
 
-    <!-- <section class="section-catalogue">
+    <section class="section-catalogue">
       <div class="container">
 
         <div class="catalogue-top">
@@ -325,7 +341,7 @@
       </div>
     </section>
 
-    <section class="section-events">
+    <!-- <section class="section-events">
       <div class="container">
         <h1 class="section-heading">
           События

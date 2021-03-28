@@ -252,25 +252,85 @@ h1 {
   font-weight: normal;
 }
 
-
 /*Gallery*/
 
 .section-gallery {
+  height: 995px;
   background-image: url('/img/Gallery-base.png');
   background-repeat: no-repeat;
   background-size: cover;
+  color: red;
 }
 
 .gallery-container {
-
+  display: flex;
+  justify-content: space-between;
+  padding-top: 89px;
+  padding-bottom: 70px;
 }
 
 .gallery-filter {
+  width: 403px;
+}
 
+.gallery-filter-selector {
+  padding-top: 24px;
+  font-weight: 600;
+  font-size: 15.2px;
+  line-height: 32px;
+}
+
+.gallery-filter-selector-label {
+  margin-left: 5px;
+  font-weight: 600;
+  font-size: 15.2px;
+  line-height: 32px;
+}
+
+.choices {
+  margin-left: 4px;
+  margin-top: 9px;
+  margin-left: 4px;
+}
+
+.choices__inner {
+  min-height: 40px;
+  padding: 0 7.5px 0 10px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+  background: none;
+  border: 1px solid white;
+  border-radius: 6px;
+}
+
+.choices__list--dropdown {
+  visibility: visible;
+  background: none;
+  border-radius: 6px;
+}
+
+.choices__list > .is-selected {
+  display: none;
+}
+
+.choices__list--dropdown > .is-highlighted {
+  background-color: red;
+}
+
+.choices__item {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+  color: #999999;
+}
+
+.gallery-filter-condition {
+  margin-top: 400px;
 }
 
 .gallery-slider {
-
+  width: 1150px;
 }
 
 
