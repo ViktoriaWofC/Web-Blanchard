@@ -75,7 +75,7 @@ h1 {
   background-size: cover;
 }
 
-.section-container {
+.gallery-container {
 
 }
 
@@ -91,10 +91,30 @@ h1 {
 /* Catalogue */
 
 
+/* Events */
+
+
+/* Books */
+
+.section-books {
+  background-image: url('/img/Book-base.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* Projects */
+
+
+/* Contacts */
+
 
 
 /* Footer */
 
+.footer {
+  background-color: black;
+}
 
 
 /*MEDIA*/
