@@ -103,7 +103,7 @@ h1 {
   color: white;
 }
 
-.search-full {
+.search-mobile {
   display: none;
 }
 
@@ -117,7 +117,48 @@ h1 {
 /* Hero*/
 
 .section-hero-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding-left: 8.22vw;
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.section-hero-styles-list {
+  display: flex;
+}
+
+.styles-item:not(:last-child) {
+  margin-right: 5vw;
+}
+
+.styles-item-link {
+  font-size: 18.1px;
+  line-height: 25px;
+  font-weight: 400;
+  color: white;
+}
+
+.search-full {
+  display: flex;
+  align-items: center;
+}
+
+.search-full-input {
+  width: 221px;
+  padding-left: 0px;
+  font-size: 18px;
+  line-height: 24px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+.search-full-input::placeholder {
+  font-size: 18px;
+  line-height: 24px;
+  color: red;
 }
 
 
@@ -197,7 +238,7 @@ h1 {
     display: none;
   }
 
-  .search-full {
+  .search-mobile {
     display: flex;
   }
 }
