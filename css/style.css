@@ -259,7 +259,7 @@ h1 {
   background-image: url('/img/Gallery-base.png');
   background-repeat: no-repeat;
   background-size: cover;
-  color: red;
+  color: white;
 }
 
 .gallery-container {
@@ -270,7 +270,10 @@ h1 {
 }
 
 .gallery-filter {
+  display: flex;
+  flex-direction: column;
   width: 403px;
+  height: 836px;
 }
 
 .gallery-filter-selector {
@@ -359,11 +362,16 @@ h1 {
 }
 
 .gallery-filter-condition {
-  margin-top: 400px;
+  margin-top: auto;
+  padding-left: 3px;
+  font-size: 15.3px;
+  line-height: 32px;
+  font-weight: 600;
 }
 
 .gallery-slider {
   width: 1150px;
+  margin-left: 20px;
 }
 
 
