@@ -377,6 +377,48 @@ h1 {
 
 /* Catalogue */
 
+.catalogue-container {
+  padding-top: 89px;
+  padding-bottom: 70px;
+}
+
+.catalogue-top {
+  display: flex;
+}
+
+.catalogue-top-country {
+  position: relative;
+  margin-left: 32px;
+}
+
+.country-list {
+  position: absolute;
+  top: -3px;
+  display: flex;
+}
+
+.country-list-item-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 66px;
+  height: 66px;
+}
+
+.country-list-item-link:hover {
+  cursor: pointer;
+}
+
+.country-icon {
+  width: 46px;
+  height: 46px;
+}
+
+.country-icon-french {
+  background-image: url('/img/French-flag.png');
+  background-repeat: no-repeat;
+}
+
 
 /* Events */
 
