@@ -15,6 +15,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/js/script.js"></script>
 
 </head>
@@ -243,16 +246,24 @@
                 </div>
               </li>
               <li class="country-list-item">
-                <a class="" data-path="" tabindex="0">2 шаг</a>
+                <div class="country-list-item-link" data-path="" tabindex="0">
+                  <div class="country-icon country-icon-germany"></div>
+                </div>
               </li>
               <li class="country-list-item">
-                <a class="" data-path="" tabindex="0">3 шаг</a>
+                <div class="country-list-item-link country-icon-selected" data-path="" tabindex="0">
+                  <div class="country-icon country-icon-italy"></div>
+                </div>
               </li>
               <li class="country-list-item">
-                <a class="" data-path="" tabindex="0">4 шаг</a>
+                <div class="country-list-item-link" data-path="" tabindex="0">
+                  <div class="country-icon country-icon-russian"></div>
+                </div>
               </li>
               <li class="country-list-item">
-                <a class="" data-path="" tabindex="0">5 шаг</a>
+                <div class="country-list-item-link" data-path="" tabindex="0">
+                  <div class="country-icon country-icon-belgian"></div>
+                </div>
               </li>
             </ul>
           </nav>
@@ -265,11 +276,25 @@
 
         <div class="catalogue-content">
           <div class="catalogue-content-info">
-            <img class="catalogue-content-info-img" src="/img/Domeniko.jpg">
+            <div class="catalogue-content-info-card catalogue-card">
+              <img class="catalogue-card-img" src="/img/Domeniko.jpg">
 
-            <div class="catalogue-content-info-description">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis blanditiis vel quod soluta doloremque numquam temporibus enim impedit, neque, quo tenetur? Dolore iste expedita facilis eaque, molestias necessitatibus ullam excepturi.
+              <div class="catalogue-card-description">
+                <div class="catalogue-card-description-heading">
+                  Доменико Гирландайо
+                </div>
+
+                <div class="catalogue-card-description-dates">
+                  2 июня 1448 — 11 января 1494.
+                </div>
+
+                <div class="catalogue-card-description-details">
+                  Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
+                </div>
+
+              </div>
             </div>
+
           </div>
 
           <div class="catalogue-content-nav">
@@ -279,11 +304,14 @@
                   C 1400 по 1499 гг.
                 </div>
                 <div class="periods-img">
-
+                  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                  </svg>
                 </div>
               </div>
               <div class="periods-content">
-                <ul>
+                <ul class="periods-content-list periods-content-list-1400">
                   <li>Бенедетто ди Биндо</li>
                   <li>Бергоньоне, Амброджо</li>
                   <li>Биссоло, Франческо</li>
@@ -311,29 +339,70 @@
                 </ul>
               </div>
 
-
               <div class="periods-text">
                 C 1500 по 1599 гг.
+              </div>
+              <div class="periods-content">
+                <ul>
+                  <li>Бенедетто ди Биндо</li>
+                  <li>Бергоньоне, Амброджо</li>
+                  <li>Биссоло, Франческо</li>
+                </ul>
               </div>
 
               <div class="periods-text">
                 C 1600 по 1699 гг.
               </div>
+              <div class="periods-content">
+                <ul>
+                  <li>Бенедетто ди Биндо</li>
+                  <li>Бергоньоне, Амброджо</li>
+                  <li>Биссоло, Франческо</li>
+                </ul>
+              </div>
 
               <div class="periods-text">
                 C 1700 по 1799 гг.
+              </div>
+              <div class="periods-content">
+                <ul>
+                  <li>Бенедетто ди Биндо</li>
+                  <li>Бергоньоне, Амброджо</li>
+                  <li>Биссоло, Франческо</li>
+                </ul>
               </div>
 
               <div class="periods-text">
                 C 1800 по 1899 гг.
               </div>
+              <div class="periods-content">
+                <ul>
+                  <li>Бенедетто ди Биндо</li>
+                  <li>Бергоньоне, Амброджо</li>
+                  <li>Биссоло, Франческо</li>
+                </ul>
+              </div>
 
               <div class="periods-text">
                 C 1900 по 1999 гг.
               </div>
+              <div class="periods-content">
+                <ul>
+                  <li>Бенедетто ди Биндо</li>
+                  <li>Бергоньоне, Амброджо</li>
+                  <li>Биссоло, Франческо</li>
+                </ul>
+              </div>
 
               <div class="periods-text">
                 C 2000 г.
+              </div>
+              <div class="periods-content">
+                <ul>
+                  <li>Бенедетто ди Биндо</li>
+                  <li>Бергоньоне, Амброджо</li>
+                  <li>Биссоло, Франческо</li>
+                </ul>
               </div>
 
             </div>

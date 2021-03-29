@@ -393,8 +393,12 @@ h1 {
 
 .country-list {
   position: absolute;
-  top: -3px;
+  top: -7px;
   display: flex;
+}
+
+.country-list-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .country-list-item-link {
@@ -403,6 +407,7 @@ h1 {
   justify-content: center;
   width: 66px;
   height: 66px;
+  border-radius: 50%;
 }
 
 .country-list-item-link:hover {
@@ -412,11 +417,130 @@ h1 {
 .country-icon {
   width: 46px;
   height: 46px;
+  background-repeat: no-repeat;
+}
+
+.country-icon-selected {
+  border: 2px solid var(--color-violet);
 }
 
 .country-icon-french {
   background-image: url('/img/French-flag.png');
-  background-repeat: no-repeat;
+}
+
+.country-icon-belgian {
+  background-image: url('/img/Belgian-flag.png');
+}
+
+.country-icon-italy {
+  background-image: url('/img/Italy-flag.png');
+}
+
+.country-icon-russian {
+  background-image: url('/img/Russian-flag.png');
+}
+
+.country-icon-germany {
+  background-image: url('/img/Germany-flag.png');
+}
+
+.catalogue-description {
+  margin-top: 23px;
+  max-width: 1080px;
+  padding-left: 4px;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: normal;
+}
+
+.catalogue-content {
+  display: flex;
+  margin-top: 40px;
+  padding-left: 5px;
+}
+
+.catalogue-content-info {
+  margin-right: 50px;
+  width: 39vw;
+}
+
+.catalogue-card-img {
+  width: 39vw;
+  height: 24.48vw;
+}
+
+.catalogue-card-description {
+  margin-top: 28px;
+}
+
+.catalogue-card-description-heading {
+  font-size: 23px;
+  line-height: 33px;
+  font-weight: 600;
+}
+
+.catalogue-card-description-dates {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: normal;
+  color: #999999;
+}
+
+.catalogue-card-description-details {
+  margin-top: 6px;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: normal;
+}
+
+.catalogue-content-nav {
+  width: 100%;
+}
+
+.periods-link {
+  display: flex;
+  padding: 37px 2px 23px 0px;
+  border-top: 1px solid #CACACA;
+  border-bottom: 1px solid #CACACA;
+  border-collapse: collapse;
+}
+
+.periods-text {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.periods-img {
+  margin-left: auto;
+}
+
+
+.periods-content {
+  height: 100% !important;
+  padding-top: 25px;
+  color: red;
+}
+
+.periods-content-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* height: calc(15.5vw / 1vw); */
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: normal;
+}
+
+.periods-content-list-1400 {
+  height: 288px;
+  padding-right: 25px;
+}
+
+.periods-content-list > li {
+  width: 200px;
 }
 
 
@@ -456,6 +580,13 @@ h1 {
   }
 
 
+}
+
+@media (max-width: 1600px) {
+  .periods-content-list-1400 {
+    height: 384px;
+    padding-right: 25px;
+  }
 }
 
 @media (max-width: 1024px) {
