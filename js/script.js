@@ -1,26 +1,31 @@
 window.addEventListener('DOMContentLoaded', function() {
 
-  // const swiper = new Swiper('.swiper-container', {
+    var swiper = new Swiper('.swiper-container-events', {
+      slidesPerView: 1,
+      //slidesPerColumn: 2,
+      //slidesPerColumnFill: 'row',
+      //spaceBetween: 30,
+      watchOverflow: true,
+      noSwiping: false,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        // when window width is >= 1600px
+         1600: {
+          slidesPerView: 5,
+           //noSwiping: true
+           //slidesPerView: 2,
+           //slidesPerColumn: 3,
+         }
+      }
+    });
 
-  //   loop: true,
 
-  //   // If we need pagination
-  //   pagination: {
-  //     el: '.swiper-pagination',
-  //     clickable: true
-  //   },
 
-  //   // Navigation arrows
-  //   navigation: {
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev',
-  //   },
 
-  //   // And if we need scrollbar
-  //   scrollbar: {
-  //     el: '.swiper-scrollbar',
-  //   },
-  // });
+
 
   // document.querySelectorAll(".nav-work-item-link").forEach(function(elem) {
   //   elem.addEventListener("click", function(event){
@@ -66,6 +71,10 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
   document.querySelector(".periods-link").click();
+
+
+
+
 
 
   // document.querySelector("#agreeCheckbox").addEventListener("change", function(event) {

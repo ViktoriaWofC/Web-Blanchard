@@ -579,35 +579,115 @@ h1 {
 }
 
 .events-content {
+  height: 300px;
   margin-top: 24px;
   padding-left: 5px;
 }
 
+.pagination-hidden {
+  display: none;
+}
+
+.swiper-container-events {
+  margin: 0px;
+  width: inherit;
+  height: inherit;
+  border: 2px solid;
+}
+
+/* .swiper-slide-event {
+  /*text-align: center;
+  font-size: 18px;
+  background: #fff;
+   height: calc((100% - 30px) / 2); */
+
+  /* Center slide text vertically */
+  /* display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+} */
+
+
+.sssss {
+
+}
+
+
+
+
+
 .events-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .event-card {
   display: flex;
   flex-direction: column;
-  max-width: 500px;
+  width: 26vw;
   min-width: 290px;
-  height: 700px;
+  height: 36.46vw;
+  min-height: 683px;
 }
 
 .event-card-img {
   width: 100%;
-  height: 15.63vw;
+  height: 27.6vw;
   min-height: 200px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 .event-card-img-1 {
   background-image: url('/img/Event-1.png');
 }
 
+.event-card-img-2 {
+  background-image: url('/img/Event-2.png');
+}
+
+.event-card-img-3 {
+  background-image: url('/img/Event-3.png');
+}
+
+.event-card-img-4 {
+  background-image: url('/img/Event-4.png');
+}
+
+.event-card-img-5 {
+  background-image: url('/img/Event-5.png');
+}
+
+.event-card-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 10px 10px 10px 10px;
+  border-left: 1px solid #CACACA;
+  border-bottom: 1px solid #CACACA;
+  border-right: 1px solid #CACACA;
+}
+
+.sssss {
+  position: relative;
+}
+
+
+.event-card-1 {
+  position: absolute;
+  top: -300px;
+}
 
 .events-button {
   padding: 17px 35px;
@@ -658,6 +738,15 @@ h1 {
   .periods-content-list-1400 {
     height: 384px;
     padding-right: 25px;
+  }
+
+  .pagination-hidden {
+    display: block;
+  }
+
+  .event-card-1 {
+    position: absolute;
+    top: -300px;
   }
 }
 
