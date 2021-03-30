@@ -65,6 +65,8 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 
+  document.querySelector(".periods-link").click();
+
 
   // document.querySelector("#agreeCheckbox").addEventListener("change", function(event) {
   //   var checkbox = event.target;

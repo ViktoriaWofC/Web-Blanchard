@@ -569,6 +569,55 @@ h1 {
 
 /* Events */
 
+.events-container {
+  padding-top: 17px;
+  padding-bottom: 80px;
+}
+
+.section-heading-events {
+  padding-left: 2px;
+}
+
+.events-content {
+  margin-top: 24px;
+  padding-left: 5px;
+}
+
+.events-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  min-width: 290px;
+  height: 700px;
+}
+
+.event-card-img {
+  width: 100%;
+  height: 15.63vw;
+  min-height: 200px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.event-card-img-1 {
+  background-image: url('/img/Event-1.png');
+}
+
+
+.events-button {
+  padding: 17px 35px;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: bold;
+  color: red;
+  border: 2px solid var(--color-violet-dark);
+  border-radius: 100px;
+}
 
 /* Books */
 
