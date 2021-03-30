@@ -66,8 +66,6 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-
   // document.querySelector("#agreeCheckbox").addEventListener("change", function(event) {
   //   var checkbox = event.target;
   //   var label = document.querySelector("#agreeLabel");

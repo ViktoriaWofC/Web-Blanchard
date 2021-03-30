@@ -9,14 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"/>
+    <link rel="stylesheet" href="/css/choices.min.css"/>
 
     <link rel="stylesheet" href="/css/style.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="/js/choices.min.js"></script>
 
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/jquery-ui.js"></script>
 
     <script src="/js/script.js"></script>
 
@@ -276,8 +276,27 @@
 
         <div class="catalogue-content">
           <div class="catalogue-content-info">
-            <div class="catalogue-content-info-card catalogue-card">
+            <div class="catalogue-content-info-card catalogue-card catalogue-card-active" data-target="DomGir">
               <img class="catalogue-card-img" src="/img/Domeniko.jpg">
+
+              <div class="catalogue-card-description">
+                <div class="catalogue-card-description-heading">
+                  Доменико Гирландайо
+                </div>
+
+                <div class="catalogue-card-description-dates">
+                  2 июня 1448 — 11 января 1494.
+                </div>
+
+                <div class="catalogue-card-description-details">
+                  Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
+                </div>
+
+              </div>
+            </div>
+
+            <div class="catalogue-content-info-card catalogue-card" data-target="DomGirGrey">
+              <img class="catalogue-card-img" src="/img/Domeniko-Grey.jpg">
 
               <div class="catalogue-card-description">
                 <div class="catalogue-card-description-heading">
@@ -323,10 +342,14 @@
                   <li>Бьяджо д’Антонио Туччи</li>
                   <li>Веккьетта</li>
                   <li>Андреа Верроккьо</li>
-                  <li>Доменико Гирландайо</li>
+                  <li>
+                    <a class="periods-content-list-link periods-content-list-link-selected" data-path="DomGir">Доменико Гирландайо</a>
+                  </li>
                   <li>Беноццо Гоццоли</li>
                   <li>Граначчи, Франческо</li>
-                  <li>Грегорио ди Чекко</li>
+                  <li>
+                    <a class="periods-content-list-link" data-path="DomGirGrey">Грегорио ди Чекко</a>
+                  </li>
                   <li>Джованни да Удине</li>
                   <li>Джованни ди Паоло</li>
                   <li>Джорджоне</li>
@@ -339,8 +362,16 @@
                 </ul>
               </div>
 
-              <div class="periods-text">
-                C 1500 по 1599 гг.
+              <div class="periods-link" tabindex="0">
+                <div class="periods-text">
+                  C 1500 по 1599 гг.
+                </div>
+                <div class="periods-img">
+                  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                  </svg>
+                </div>
               </div>
               <div class="periods-content">
                 <ul>
@@ -350,8 +381,16 @@
                 </ul>
               </div>
 
-              <div class="periods-text">
-                C 1600 по 1699 гг.
+              <div class="periods-link" tabindex="0">
+                <div class="periods-text">
+                  C 1600 по 1699 гг.
+                </div>
+                <div class="periods-img">
+                  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                  </svg>
+                </div>
               </div>
               <div class="periods-content">
                 <ul>
@@ -361,8 +400,16 @@
                 </ul>
               </div>
 
-              <div class="periods-text">
-                C 1700 по 1799 гг.
+              <div class="periods-link" tabindex="0">
+                <div class="periods-text">
+                  C 1700 по 1799 гг.
+                </div>
+                <div class="periods-img">
+                  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                  </svg>
+                </div>
               </div>
               <div class="periods-content">
                 <ul>
@@ -372,8 +419,16 @@
                 </ul>
               </div>
 
-              <div class="periods-text">
-                C 1800 по 1899 гг.
+              <div class="periods-link" tabindex="0">
+                <div class="periods-text">
+                  C 1800 по 1899 гг.
+                </div>
+                <div class="periods-img">
+                  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                  </svg>
+                </div>
               </div>
               <div class="periods-content">
                 <ul>
@@ -383,8 +438,16 @@
                 </ul>
               </div>
 
-              <div class="periods-text">
-                C 1900 по 1999 гг.
+              <div class="periods-link" tabindex="0">
+                <div class="periods-text">
+                  C 1900 по 1999 гг.
+                </div>
+                <div class="periods-img">
+                  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                  </svg>
+                </div>
               </div>
               <div class="periods-content">
                 <ul>
@@ -394,8 +457,16 @@
                 </ul>
               </div>
 
-              <div class="periods-text">
-                C 2000 г.
+              <div class="periods-link" tabindex="0">
+                <div class="periods-text">
+                  C 2000 г.
+                </div>
+                <div class="periods-img">
+                  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                  </svg>
+                </div>
               </div>
               <div class="periods-content">
                 <ul>
