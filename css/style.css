@@ -579,7 +579,7 @@ h1 {
 }
 
 .events-content {
-  height: 300px;
+  /* height: 300px; */
   margin-top: 24px;
   padding-left: 5px;
 }
@@ -592,8 +592,9 @@ h1 {
   margin: 0px;
   width: inherit;
   height: inherit;
-  border: 2px solid;
+  background-color: #9D5CD0;
 }
+
 
 /* .swiper-slide-event {
   /*text-align: center;
@@ -617,10 +618,6 @@ h1 {
 } */
 
 
-.sssss {
-
-}
-
 
 
 
@@ -628,17 +625,22 @@ h1 {
 .events-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  margin-left: -20px;
 }
 
 .event-card {
   display: flex;
   flex-direction: column;
-  width: 26vw;
+  margin-left: 20px;
+  width: 26vw !important;
   min-width: 290px;
   height: 36.46vw;
   min-height: 683px;
 }
+
+/* .event-card + .event-card {
+  margin-left: 10px;
+} */
 
 .event-card-img {
   width: 100%;
@@ -679,15 +681,6 @@ h1 {
   border-right: 1px solid #CACACA;
 }
 
-.sssss {
-  position: relative;
-}
-
-
-.event-card-1 {
-  position: absolute;
-  top: -300px;
-}
 
 .events-button {
   padding: 17px 35px;
@@ -698,6 +691,9 @@ h1 {
   border: 2px solid var(--color-violet-dark);
   border-radius: 100px;
 }
+
+
+
 
 /* Books */
 
@@ -740,14 +736,7 @@ h1 {
     padding-right: 25px;
   }
 
-  .pagination-hidden {
-    display: block;
-  }
 
-  .event-card-1 {
-    position: absolute;
-    top: -300px;
-  }
 }
 
 @media (max-width: 1024px) {
@@ -772,6 +761,10 @@ h1 {
   .section-hero {
     height: 668px;
     background-image: url('/img/hero-background-1024.png');
+  }
+
+  .pagination-hidden {
+    display: block;
   }
 }
 

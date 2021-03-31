@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', function() {
       },
       breakpoints: {
         // when window width is >= 1600px
-         1600: {
+         1024: {
           slidesPerView: 5,
            //noSwiping: true
            //slidesPerView: 2,
