@@ -37,6 +37,9 @@
     <script src="/js/jquery.js"></script>
     <script src="/js/jquery-ui.js"></script>
 
+    <script src="/js/just-validate.min.js"></script>
+    <script src="/js/inputmask.min.js"></script>
+
 
     <link rel="stylesheet" href="/css/style.css">
 
@@ -618,13 +621,11 @@
       </div>
     </section>
 
-
-
-
     <section class="section-books">
       <div class="container books-container">
+
         <div class="books-filter">
-          <h1 class="section-heading">Издания</h1>
+          <h1 class="section-heading section-books-heading">Издания</h1>
 
           <div class="books-filter-categories categories">
             <div class="categories-heading">
@@ -634,7 +635,7 @@
             <ul class="categories-list">
               <li class="categories-list-item category">
                 <label class="category-label">
-                  <input type="checkbox" class="checkbox">
+                  <input type="checkbox" class="category-checkbox">
                   Бестселлеры
                   <span></span>
                 </label>
@@ -642,7 +643,7 @@
 
               <li class="categories-list-item category">
                 <label class="category-label">
-                  <input type="checkbox" class="checkbox">
+                  <input type="checkbox" class="category-checkbox">
                   Искусство
                   <span></span>
                 </label>
@@ -650,15 +651,15 @@
 
               <li class="categories-list-item category">
                 <label class="category-label">
-                  <input type="checkbox" class="checkbox">
+                  <input type="checkbox" class="category-checkbox">
                   Архитектура
                   <span></span>
                 </label>
               </li>
 
               <li class="categories-list-item category">
-                <label class="category-label">
-                  <input type="checkbox" class="checkbox">
+                <label class="category-label" aria-checked="true">
+                  <input type="checkbox" class="category-checkbox" checked>
                   Дизайн
                   <span></span>
                 </label>
@@ -666,7 +667,7 @@
 
               <li class="categories-list-item category">
                 <label class="category-label">
-                  <input type="checkbox" class="checkbox">
+                  <input type="checkbox" class="category-checkbox">
                   Мода
                   <span></span>
                 </label>
@@ -674,7 +675,7 @@
 
               <li class="categories-list-item category">
                 <label class="category-label">
-                  <input type="checkbox" class="checkbox">
+                  <input type="checkbox" class="category-checkbox">
                   Детям
                   <span></span>
                 </label>
@@ -682,7 +683,7 @@
 
               <li class="categories-list-item category">
                 <label class="category-label">
-                  <input type="checkbox" class="checkbox">
+                  <input type="checkbox" class="category-checkbox">
                   Художественная литература
                   <span></span>
                 </label>
@@ -690,7 +691,7 @@
 
               <li class="categories-list-item category">
                 <label class="category-label">
-                  <input type="checkbox" class="checkbox">
+                  <input type="checkbox" class="category-checkbox">
                   Публицистика
                   <span></span>
                 </label>
@@ -698,7 +699,7 @@
 
               <li class="categories-list-item category">
                 <label class="category-label">
-                  <input type="checkbox" class="checkbox">
+                  <input type="checkbox" class="category-checkbox">
                   Путеводители
                   <span></span>
                 </label>
@@ -706,7 +707,7 @@
 
               <li class="categories-list-item category">
                 <label class="category-label">
-                  <input type="checkbox" class="checkbox">
+                  <input type="checkbox" class="category-checkbox">
                   Философия
                   <span></span>
                 </label>
@@ -714,7 +715,7 @@
 
               <li class="categories-list-item category">
                 <label class="category-label">
-                  <input type="checkbox" class="checkbox">
+                  <input type="checkbox" class="category-checkbox">
                   Учебная литература
                   <span></span>
                 </label>
@@ -722,7 +723,7 @@
 
               <li class="categories-list-item category">
                 <label class="category-label">
-                  <input type="checkbox" class="checkbox">
+                  <input type="checkbox" class="category-checkbox">
                   Журналы и газеты
                   <span></span>
                 </label>
@@ -738,11 +739,11 @@
             <div class="price-content">
               <span>От</span>
 
-              <input type="number" name="" id="" value="50">
+              <input type="text" name="" class="price-content-input" value="50">
 
               <span>до</span>
 
-              <input type="number" name="" id="" value="25 000">
+              <input type="text" name="" class="price-content-input" value="25 000">
 
               <span>руб.</span>
 
@@ -758,7 +759,12 @@
       </div>
     </section>
 
-    <!-- <section class="section-projects">
+
+
+
+
+
+    <section class="section-projects">
       <div class="container projects">
         <h1 class="section-heading">
           Проекты
@@ -795,6 +801,8 @@
 
       </div>
     </section>
+
+
 
     <section class="section-contacts">
       <div class="container">
@@ -847,7 +855,7 @@
         </div>
       </div>
 
-    </section> -->
+    </section>
 
   </main>
 

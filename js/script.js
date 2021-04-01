@@ -87,24 +87,28 @@ window.addEventListener('DOMContentLoaded', function() {
   });
 
 
+  document.querySelectorAll(".category-checkbox").forEach(function(el){
+    el.addEventListener("change", function(event) {
+      var checkbox = event.target;
+      var label = checkbox.parentElement;
+      if(checkbox.checked){
+        label.setAttribute("aria-checked", true);
+      }
+      else {
+        label.setAttribute("aria-checked", false);
+      }
+    });
+  });
 
+  document.querySelectorAll(".price-content-input").forEach(function(el){
+    el.addEventListener("blur", function(event) {
+      event.currentTarget.value = event.currentTarget.value.replace(/[^\d]/g, '').replace(/\B(?=(?:\d{3})+(?!\d))/g, ' ');
+    });
 
-  // document.querySelector("#agreeCheckbox").addEventListener("change", function(event) {
-  //   var checkbox = event.target;
-  //   var label = document.querySelector("#agreeLabel");
-  //   if(checkbox.checked){
-  //     //checkbox.checked=false;
-  //     label.setAttribute("aria-checked", true);
-  //     //console.log(label.getAttribute("aria-checked"));
-  //   }
-  //   else {
-  //     //checkbox.checked=true;
-  //     label.setAttribute("aria-checked", false);
-  //     //console.log(label.getAttribute("aria-checked"));
-  //   }
-
-  // });
-
+    el.addEventListener("focus", function(event) {
+      event.currentTarget.value = event.currentTarget.value.replace(/\s/g, '');
+    });
+  });
 
 
   // document.querySelectorAll(".ui-accordion-content").forEach(function(el){
