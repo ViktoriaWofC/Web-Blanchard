@@ -859,7 +859,6 @@ h1 {
 .projects-container {
   padding-top: 89px;
   padding-bottom: 10px;
-  color: red;
 }
 
 .projects-description {
@@ -912,7 +911,7 @@ h1 {
   content: '';
   border: 7px solid transparent;
   border-top: 11px solid #CACACA;
-  opacity: 1;
+  opacity: 0;
   transition: opacity .15s ease-in-out;
 }
 
