@@ -847,10 +847,6 @@ h1 {
 }
 
 
-
-
-
-
 .books-slider {
   width: 60vw;
   height: 605px;
@@ -859,6 +855,84 @@ h1 {
 
 
 /* Projects */
+
+.projects-container {
+  padding-top: 89px;
+  padding-bottom: 10px;
+  color: red;
+}
+
+.projects-description {
+  margin-top: 24px;
+  margin-left: 3px;
+  max-width: 1080px;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: normal;
+}
+
+
+.projects-tooltip {
+  position: relative;
+  display: inline;
+}
+
+.tooltip-marker {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background-image: url('/img/icon-info.svg');
+  background-size: cover;
+  transform: translate(-2px, 3px);
+  cursor: pointer;
+}
+
+.tooltip-popup {
+  position: absolute;
+  left: calc(50% - 3px);
+  transform: translateX(-50%);
+  bottom: 31px;
+  width: max-content;
+  max-width: 264px;
+  padding: 9px 11px 9px 11px;
+  color: white;
+  font-size: 11.5px;
+  line-height: 16px;
+  font-weight: 600;
+  text-align: center;
+  background-color: #CACACA;
+  opacity: 0;
+  transition: opacity .15s ease-in-out;
+}
+
+.tooltip-marker::before {
+  position: absolute;
+  bottom: 11px;
+  left: 3px;
+  content: '';
+  border: 7px solid transparent;
+  border-top: 11px solid #CACACA;
+  opacity: 1;
+  transition: opacity .15s ease-in-out;
+}
+
+.tooltip-marker:hover + .tooltip-popup,
+.tooltip-marker:focus + .tooltip-popup {
+  opacity: 1;
+}
+
+.tooltip-marker:hover::before,
+.tooltip-marker:focus::before {
+  opacity: 1;
+}
+
+.projects-description-link {
+  font-size: 15.5px;
+  line-height: 32px;
+  font-weight: 600;
+  color: var(--color-violet);
+}
+
 
 
 /* Contacts */
