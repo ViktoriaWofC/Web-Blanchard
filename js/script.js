@@ -73,6 +73,18 @@ window.addEventListener('DOMContentLoaded', function() {
   document.querySelector(".periods-link").click();
 
 
+  document.querySelector(".events-button").addEventListener("click", function(event) {
+    document.querySelector(".events-list").classList.toggle("events-list-hidden");
+    event.target.style.display  = 'none';
+  });
+
+  document.querySelector(".events-button").addEventListener("keypress", function(event) {
+    if(event.keyCode == 13)
+    {
+      document.querySelector(".events-list").classList.toggle("events-list-hidden");
+      event.target.style.display  = 'none';
+    }
+  });
 
 
 
