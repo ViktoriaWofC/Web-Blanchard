@@ -111,6 +111,30 @@ window.addEventListener('DOMContentLoaded', function() {
   });
 
 
+  var swiperPertners = new Swiper('.swiper-container-partners', {
+    slidesPerView: 1,
+    spaceBetween: 50,
+    slidesPerGroup: 1,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      // when window width is >= 1600px
+      320: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      },
+
+      1600: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+      }
+    }
+  });
+
+
   // document.querySelectorAll(".ui-accordion-content").forEach(function(el){
   //   el.classList.remove("ui-accordion-content-active");
   // });
