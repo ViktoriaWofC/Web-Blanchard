@@ -375,10 +375,62 @@ h1 {
   font-weight: 600;
 }
 
-.gallery-slider {
+.gallery-swiper {
+  position: relative;
   width: 1150px;
   margin-left: 20px;
 }
+
+.gallery-swiper-container {
+  margin-top: 76px;
+  width: inherit;
+  height: 750px;
+  background-color: red;
+}
+
+.gallery-swiper-wrapper {
+  display: flex;
+  justify-content: space-between;
+  /* margin: -50px 0 0 -50px;
+  width: calc(100% + 50px) !important;
+  height: calc(100% + 50px); */
+  height: inherit;
+  overflow: hidden;
+}
+
+.gallery-swiper-pagination {
+  position: absolute;
+  top: -15px;
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: normal;
+  color: red;
+}
+
+.gallery-swiper-button-prev {
+  position: absolute;
+  top: 0px;
+}
+
+.gallery-swiper-button-next {
+  position: absolute;
+  top: 0px;
+}
+
+.gallery-swiper-btn {
+
+}
+
+.gallery-swiper-slide{
+  /* margin: 50px 0 0 50px !important; */
+  margin-right: 5px;
+  width: 350px !important;
+  height: 350px !important;
+}
+
 
 
 /* Catalogue */
