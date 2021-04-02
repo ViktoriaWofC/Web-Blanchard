@@ -961,16 +961,54 @@ h1 {
   top: calc(50% - 15px);
   width: 29px;
   height: 29px;
-  background-color: red;
+  background-color: #ECECEC;
   border-radius: 50%;
+  transition-property: background-color border;
+  transition-duration: .15s;
+  transition-timing-function: ease-in-out;
+}
+
+.swiper-btn-projects:hover {
+  cursor: pointer;
+  background-color: var(--color-violet);
+}
+
+.swiper-btn-projects:focus {
+  border: 2px solid var(--color-violet-dark);
+}
+
+.swiper-btn-projects:active {
+  border: 2px solid var(--color-violet-light);
+  background-color: var(--color-violet-dark);
+}
+
+.swiper-btn-projects::after {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  transition: border-color .15s ease-in-out;
+}
+
+.swiper-btn-projects:hover::after {
+  border-color: white;
 }
 
 .swiper-button-prev-projects {
   left: 3px;
 }
 
+.swiper-button-prev-projects::after {
+  transform: rotate(-45deg);
+}
+
 .swiper-button-next-projects {
   right: 3px;
+}
+
+.swiper-button-next-projects::after {
+  transform: rotate(135deg);
 }
 
 .partners-img {
