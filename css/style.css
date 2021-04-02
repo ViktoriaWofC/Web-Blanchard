@@ -1012,11 +1012,19 @@ h1 {
 }
 
 .partners-img {
-  /* margin-right: 50px; */
-  /* width: 450px !important; */
   height: 150px !important;
   background-repeat: no-repeat;
   background-size: 100% auto;
+  filter: grayscale(50);
+  opacity: 0.4;
+  transition-property: filter opacity;
+  transition-duration: .15s;
+  transition-timing-function: ease-in-out;
+}
+
+.partners-img:hover {
+  filter: grayscale(0);
+  opacity: 1;
 }
 
 .partners-img-1 {
@@ -1057,10 +1065,136 @@ h1 {
 
 
 
-
-
 /* Contacts */
 
+.contacts-container {
+  padding-top: 79px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: stretch;
+  margin-top: 25px;
+}
+
+.contacts-map {
+  width: 1238px;
+  /* height: 638px; */
+}
+
+[class*='ground-pane'] {
+  filter: grayscale(1);
+}
+
+.contacts-details {
+  display: flex;
+  flex-direction: column;
+  width: 35.52vw;
+  padding-top: 122px;
+  padding-bottom: 122px;
+  padding-left: calc(8.1vw + 3px);
+  padding-right: 30px;
+  border: 1px solid #CACACA;
+}
+
+.address-general {
+  font-size: 23.3px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.address-description {
+  margin-top: 3px;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: normal;
+}
+
+.contacts-details-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 28px;
+}
+
+.details-form-heading {
+  margin-bottom: 16px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: normal;
+}
+
+.details-form-input {
+  margin-bottom: 22px;
+  width: 20.83vw;
+  padding: 3px 10px 3px 23px;;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: normal;
+  border: 1px solid #333333;
+  border-radius: 100px;
+}
+
+.details-form-input::placeholder {
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: normal;
+  color: #999999;
+}
+
+.details-form-btn {
+  width: fit-content;
+  padding: 15px 34px;;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 600;
+  color: var(--color-violet);
+  border: 2px solid var(--color-violet);
+  border-radius: 100px;
+  background-color: white;
+}
+
+.contacts-details-social {
+  margin-top: 39px;
+  display: flex;
+  flex-direction: column;
+}
+
+.details-social-heading {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: normal;
+}
+
+.details-social-icons {
+  display: flex;
+  margin-top: 15px;
+}
+
+.details-social-icon {
+  width: 39px;
+  height: 39px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform .15s ease-in-out;
+}
+
+.details-social-icon:hover {
+  cursor: pointer;
+  transform: scale(1.2, 1.2);
+}
+
+.details-social-icon:not(:last-child) {
+  margin-right: 21px;
+}
+
+.icons-whatsapp {
+  background-image: url(/img/Whatsapp-Icon.svg);
+}
+
+.icons-telegram {
+  background-image: url(/img/Telegram-Icon.svg);
+}
 
 
 /* Footer */
