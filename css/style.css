@@ -1076,11 +1076,14 @@ h1 {
   flex-direction: row-reverse;
   align-items: stretch;
   margin-top: 25px;
+  height: 700px;
 }
 
 .contacts-map {
   width: 1238px;
-  /* height: 638px; */
+  /* height: 682px; */
+  height: auto;
+  overflow: hidden;
 }
 
 [class*='ground-pane'] {
@@ -1091,6 +1094,7 @@ h1 {
   display: flex;
   flex-direction: column;
   width: 35.52vw;
+  min-width: 500px;
   padding-top: 122px;
   padding-bottom: 122px;
   padding-left: calc(8.1vw + 3px);
@@ -1127,6 +1131,7 @@ h1 {
 .details-form-input {
   margin-bottom: 22px;
   width: 20.83vw;
+  min-width: 335px;
   padding: 3px 10px 3px 23px;;
   font-size: 16px;
   line-height: 32px;
@@ -1200,7 +1205,53 @@ h1 {
 /* Footer */
 
 .footer {
+  height: 140px;
   background-color: black;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.footer-logo {
+  margin-left: 4px;
+  padding-top: 50px;
+}
+
+.footer-icons {
+  display: flex;
+  padding-top: 47px;
+}
+
+.footer-icon {
+  width: 46px;
+  height: 46px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform .15s ease-in-out;
+}
+
+.footer-icon:not(:last-child) {
+  margin-right: 19px;
+}
+
+.footer-icon:hover {
+  cursor: pointer;
+  transform: scale(1.2, 1.2);
+}
+
+.footer-icon-vk {
+  background-image: url('/img/vk.svg');
+}
+
+.footer-icon-instagram {
+  background-image: url('/img/instagram.svg');
+}
+
+.footer-icon-fb {
+  background-image: url('/img/fb.svg');
 }
 
 
