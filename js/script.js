@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', function() {
 
-  var swiper = new Swiper('.gallery-swiper-container', {
+  var swiperGallery = new Swiper('.gallery-swiper-container', {
     slidesPerView: 1,
     slidesPerGroup: 1,
     //slidesPerColumn: 2,
@@ -33,7 +33,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 
-  var swiper = new Swiper('.swiper-container-events', {
+  var swiperEvents = new Swiper('.swiper-container-events', {
     slidesPerView: 1,
     //slidesPerColumn: 2,
     //slidesPerColumnFill: 'row',
@@ -124,15 +124,16 @@ window.addEventListener('DOMContentLoaded', function() {
   document.querySelector(".periods-link").click();
 
 
-  document.querySelector(".events-button").addEventListener("click", function(event) {
-    document.querySelector(".events-list").classList.toggle("events-list-hidden");
+  document.querySelector(".events-button-content").addEventListener("click", function(event) {
+    document.querySelector(".events-list").classList.remove("events-list-hidden");
     event.target.style.display  = 'none';
   });
 
-  document.querySelector(".events-button").addEventListener("keypress", function(event) {
+  document.querySelector(".events-button-content").addEventListener("keypress", function(event) {
     if(event.keyCode == 13)
     {
-      document.querySelector(".events-list").classList.toggle("events-list-hidden");
+      console.log(document.querySelector(".events-list"))
+      document.querySelector(".events-list").classList.remove("events-list-hidden");
       event.target.style.display  = 'none';
     }
   });
@@ -159,6 +160,43 @@ window.addEventListener('DOMContentLoaded', function() {
     el.addEventListener("focus", function(event) {
       event.currentTarget.value = event.currentTarget.value.replace(/\s/g, '');
     });
+  });
+
+  var swiperBooks = new Swiper('.books-swiper-container', {
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    watchOverflow: true,
+    //noSwiping: true,
+    //slidesPerColumn: 2,
+    //slidesPerColumnFill: 'row',
+    //spaceBetween: 50,
+    pagination: {
+      el: '.books-swiper-pagination',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.books-swiper-button-next',
+      prevEl: '.books-swiper-button-prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        noSwiping: false,
+      },
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        noSwiping: true,
+      },
+      // when window width is >= 1600px
+      1600: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        //noSwiping: false,
+      },
+
+    }
   });
 
 

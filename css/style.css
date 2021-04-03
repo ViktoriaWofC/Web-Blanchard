@@ -748,7 +748,7 @@ h1 {
   display: flex;
   flex-direction: column;
   padding-top: 17px;
-  padding-bottom: 80px;
+  padding-bottom: 70px;
   padding-left: calc(8.1vw + 5px);
   padding-right: calc(8.3vw - 5px);
 }
@@ -867,18 +867,58 @@ h1 {
   border-bottom: 1px solid var(--color-violet);
 }
 
-
 .events-button {
   align-self: center;
+  padding: 3px;
+  border: 2px solid transparent;
+  border-radius: 100px;
+  box-sizing: content-box;
+  transform: translate(-2px, -5px);
+  transition: border .15s ease-in-out;
+}
+
+.events-button:focus {
+  border-color: transparent;
+}
+
+.events-button:focus-within {
+  border-color: var(--color-violet-light);
+}
+
+.events-button + .events-button-content:active {
+  border-color: transparent;
+}
+
+.events-button-content {
   padding: 16px 33px;
   font-size: 18px;
   line-height: 25px;
   font-weight: bold;
   color: var(--color-violet);
+  background-color: white;
   border: 2px solid var(--color-violet-dark);
   border-radius: 100px;
+  transition-property: border, color, background-color;
+  transition-duration: .15s;
+  transition-timing-function: ease-in-out;
 }
 
+.events-button-content:focus {
+  outline: none;
+}
+
+.events-button-content:hover {
+  cursor: pointer;
+  color: white;
+  border-color: var(--color-violet-violet);
+  background-color: var(--color-violet);
+}
+
+.events-button-content:active {
+  cursor: pointer;
+  border-color: var(--color-violet-light);
+  background-color: var(--color-violet-dark);
+}
 
 
 
@@ -1015,11 +1055,102 @@ h1 {
 }
 
 
-.books-slider {
+.books-swiper {
+  position: relative;
   width: 60vw;
-  height: 605px;
+}
+
+.books-swiper-container {
+  margin-top: 92px;
+  width: inherit;
+  /* height: 750px; */
+  height: 513px;
   background-color: red;
 }
+
+.books-swiper-wrapper {
+  display: flex;
+  /* flex-direction: column;
+  flex-wrap: wrap; */
+  /* justify-content: space-between;
+  overflow: hidden; */
+}
+
+
+.books-swiper-slide {
+  width: 350px !important;
+  background-color: lawngreen;
+}
+
+
+
+
+
+.books-swiper-pagination {
+  position: absolute;
+  top: 32px;
+  left: 35px;
+  width: 60px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: normal;
+}
+
+.books-swiper-button-prev {
+  left: 3px;
+}
+
+.books-swiper-button-next {
+  left: 101px;
+}
+
+.books-swiper-button-prev::after {
+  transform: rotate(-45deg);
+}
+
+.books-swiper-button-next::after {
+  transform: rotate(135deg);
+}
+
+.books-swiper-btn {
+  position: absolute;
+  top: 32px;
+  width: 29px;
+  height: 29px;
+  background-color: #666666;
+  border-radius: 50%;
+  transition-property: background-color border;
+  transition-duration: .15s;
+  transition-timing-function: ease-in-out;
+}
+
+.books-swiper-btn:hover {
+  cursor: pointer;
+  background-color: var(--color-violet);
+}
+
+.books-swiper-btn:focus {
+  border: 2px solid var(--color-violet-dark);
+}
+
+.books-swiper-btn:active {
+  border: 2px solid var(--color-violet-light);
+  background-color: var(--color-violet-dark);
+}
+
+.books-swiper-btn::after {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  transition: border-color .15s ease-in-out;
+}
+
+
+
+
 
 
 /* Projects */
