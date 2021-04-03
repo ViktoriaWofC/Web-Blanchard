@@ -76,12 +76,33 @@ window.addEventListener('DOMContentLoaded', function() {
         el.classList.remove("country-list-item-selected");
       });
       event.currentTarget.classList.add("country-list-item-selected");
+  };
+
+  document.querySelectorAll(".periods-content-list-link").forEach(function(elem) {
+    elem.addEventListener("click", function(event){
+      ChangePeriodsTabAction(event);
+    })
+    elem.addEventListener("keypress", function(event){
+      if(event.keyCode == 13) {
+        ChangePeriodsTabAction(event);
+      }
+    })
+  });
+
+  function ChangePeriodsTabAction(event) {
+    const path = event.currentTarget.dataset.path;
+
+      //add tab style
+      document.querySelectorAll(".periods-content-list-link").forEach(function(el){
+        el.classList.remove("periods-content-list-link-selected");
+      });
+      event.currentTarget.classList.add("periods-content-list-link-selected");
 
       //add visible
-      // document.querySelectorAll(".work-item").forEach(function(el){
-      //   el.classList.remove("work-item-active");
-      // });
-      // document.querySelector(`[data-target="${path}"]`).classList.add("work-item-active");
+      document.querySelectorAll(".catalogue-content-info-card").forEach(function(el){
+        el.classList.remove("catalogue-card-active");
+      });
+      document.querySelector(`[data-target="${path}"]`).classList.add("catalogue-card-active");
   };
 
   $( function() {

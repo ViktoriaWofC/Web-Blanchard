@@ -11,8 +11,14 @@
 }
 
 * :focus {
-  outline: 2px solid var(--color-orange);
+  outline: none;
 }
+
+* :focus-visible {
+  outline: 2px solid var(--color-violet-dark);
+}
+
+
 
 html {
   font-family: 'Open Sans', sans-serif;
@@ -619,19 +625,71 @@ h1 {
   border-top: 1px solid #CACACA;
   border-bottom: 1px solid #CACACA;
   border-collapse: collapse;
+  color: #333333;
+  transition-property: border, color;
+  transition-duration: .15s;
+  transition-timing-function: ease-in-out;
 }
 
 .periods-text {
   font-size: 24px;
   line-height: 32px;
   font-weight: 600;
-  color: #333333;
 }
 
 .periods-img {
   margin-left: auto;
   transform: translateY(-5px);
 }
+
+.periods-img-svg {
+  border-radius: 50%;
+  transition-property: border, transform;
+  transition-duration: .15s;
+  transition-timing-function: ease-in-out;
+}
+
+.periods-img-circle {
+  transition: fill .15s ease-in-out;
+}
+
+.periods-img-arrow {
+  transition: stroke .15s ease-in-out;
+}
+
+.periods-link:focus-visible {
+  outline: 2px solid var(--color-violet-dark);
+}
+
+.periods-link:hover {
+  cursor: pointer;
+  border-color: var(--color-violet);
+  color: var(--color-violet);
+}
+
+.periods-link:hover .periods-img-circle {
+  fill: var(--color-violet);
+}
+
+.periods-link:hover .periods-img-arrow {
+  stroke: white;
+}
+
+.periods-link:active .periods-img-circle {
+  fill: var(--color-violet-dark);
+}
+
+.periods-link:active .periods-img-svg {
+  border: 2px solid var(--color-violet-light);
+}
+
+
+
+.periods-link[aria-selected="true"] .periods-img-svg {
+  transform: rotate(180deg);
+}
+
+
 
 
 .periods-content {
@@ -661,16 +719,25 @@ h1 {
 
 .periods-content-list-link-selected {
   font-weight: 600;
-  font-size: 15.3px;
+  font-size: 15px;
   color: var(--color-violet);
+}
+
+.periods-content-list-link {
+  transition-property: border, color;
+  transition-duration: .15s;
+  transition-timing-function: ease-in-out;
 }
 
 .periods-content-list-link:hover {
   cursor: pointer;
+  color: var(--color-violet);
+  border-bottom: 1px solid var(--color-violet);
 }
 
 .periods-content-list-link:active {
   color: var(--color-violet-dark);
+  border-bottom: none;
 }
 
 
