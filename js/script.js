@@ -1,41 +1,3 @@
-// const breakpoint = window.matchMedia( '(max-width:1600px)' );
-// var swiperBooks;
-
-// const enableSwiper = function() {
-//   swiperBooks = new Swiper('.books-swiper-container', {
-//     slidesPerView: 1,
-//     slidesPerGroup: 1,
-//     watchOverflow: true,
-//     noSwiping: false,
-//     //slidesPerColumn: 2,
-//     //slidesPerColumnFill: 'row',
-//     //spaceBetween: 50,
-//     pagination: {
-//       el: '.books-swiper-pagination',
-//       type: 'fraction',
-//     },
-//     navigation: {
-//       nextEl: '.books-swiper-button-next',
-//       prevEl: '.books-swiper-button-prev',
-//     },
-//     breakpoints: {
-
-//       // when window width is >= 1600px
-
-//       768: {
-//         slidesPerView: 2,
-//         slidesPerGroup: 2,
-//       },
-//       1600: {
-//         slidesPerView: 3,
-//         slidesPerGroup: 3,
-//       },
-
-
-//     }
-//   });
-// };
-
 window.addEventListener('DOMContentLoaded', function() {
 
   var swiperGallery = new Swiper('.gallery-swiper-container', {
@@ -203,40 +165,6 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-  // // breakpoint where swiper will be destroyed
-  // // and switches to a dual-column layout
-  //const breakpoint = window.matchMedia( '(max-width:1600px)' );
-  // // keep track of swiper instances to destroy later
-
-
-  // const breakpointChecker = function() {
-  //   // if larger viewport and multi-row layout needed
-  //   if ( breakpoint.matches === true ) {
-  //       // clean up old instances and inline styles when available
-  //       if ( swiperBooks !== undefined ) swiperBooks.destroy( true, true );
-  //       // or/and do nothing
-  //       return;
-  //   // else if a small viewport and single column layout needed
-  //   } else if ( breakpoint.matches === false ) {
-  //       // fire small viewport version of swiper
-  //       if ( swiperBooks === undefined )
-  //       enableSwiper();
-
-  //       return;
-  //   }
-  // };
-
-  // enableSwiper();
-
-
-  //////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////
-  // keep an eye on viewport size changes
-  //breakpoint.addListener(breakpointChecker);
-
-
   CheckSwiperBooks(breakpointSwiperBooks.matches);
 
 
@@ -244,7 +172,7 @@ window.addEventListener('DOMContentLoaded', function() {
   var swiperPertners = new Swiper('.swiper-container-partners', {
     slidesPerView: 1,
     spaceBetween: 50,
-    slidesPerGroup: 1,
+    //slidesPerGroup: 1,
     loop: true,
     navigation: {
       nextEl: '.swiper-button-next',
@@ -253,8 +181,8 @@ window.addEventListener('DOMContentLoaded', function() {
     breakpoints: {
       // when window width is >= 1600px
       320: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
+        slidesPerView: 2,
+        slidesPerGroup: 2,
       },
 
       1600: {
@@ -325,7 +253,7 @@ function CreateSwiperBooks() {
     slidesPerView: 1,
     slidesPerGroup: 1,
     watchOverflow: true,
-    noSwiping: false,
+    //noSwiping: false,
     //slidesPerColumn: 2,
     //slidesPerColumnFill: 'row',
     //spaceBetween: 50,
@@ -344,10 +272,17 @@ function CreateSwiperBooks() {
       768: {
         slidesPerView: 2,
         slidesPerGroup: 2,
+        //spaceBetween: 30
+      },
+      1000: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 45
       },
       1600: {
         slidesPerView: 3,
         slidesPerGroup: 3,
+        spaceBetween: 45
       },
 
 
