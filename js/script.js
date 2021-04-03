@@ -1,3 +1,41 @@
+// const breakpoint = window.matchMedia( '(max-width:1600px)' );
+// var swiperBooks;
+
+// const enableSwiper = function() {
+//   swiperBooks = new Swiper('.books-swiper-container', {
+//     slidesPerView: 1,
+//     slidesPerGroup: 1,
+//     watchOverflow: true,
+//     noSwiping: false,
+//     //slidesPerColumn: 2,
+//     //slidesPerColumnFill: 'row',
+//     //spaceBetween: 50,
+//     pagination: {
+//       el: '.books-swiper-pagination',
+//       type: 'fraction',
+//     },
+//     navigation: {
+//       nextEl: '.books-swiper-button-next',
+//       prevEl: '.books-swiper-button-prev',
+//     },
+//     breakpoints: {
+
+//       // when window width is >= 1600px
+
+//       768: {
+//         slidesPerView: 2,
+//         slidesPerGroup: 2,
+//       },
+//       1600: {
+//         slidesPerView: 3,
+//         slidesPerGroup: 3,
+//       },
+
+
+//     }
+//   });
+// };
+
 window.addEventListener('DOMContentLoaded', function() {
 
   var swiperGallery = new Swiper('.gallery-swiper-container', {
@@ -162,42 +200,45 @@ window.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  var swiperBooks = new Swiper('.books-swiper-container', {
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    watchOverflow: true,
-    //noSwiping: true,
-    //slidesPerColumn: 2,
-    //slidesPerColumnFill: 'row',
-    //spaceBetween: 50,
-    pagination: {
-      el: '.books-swiper-pagination',
-      type: 'fraction',
-    },
-    navigation: {
-      nextEl: '.books-swiper-button-next',
-      prevEl: '.books-swiper-button-prev',
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-        noSwiping: false,
-      },
-      768: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        noSwiping: true,
-      },
-      // when window width is >= 1600px
-      1600: {
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-        //noSwiping: false,
-      },
 
-    }
-  });
+
+
+
+  // // breakpoint where swiper will be destroyed
+  // // and switches to a dual-column layout
+  //const breakpoint = window.matchMedia( '(max-width:1600px)' );
+  // // keep track of swiper instances to destroy later
+
+
+  // const breakpointChecker = function() {
+  //   // if larger viewport and multi-row layout needed
+  //   if ( breakpoint.matches === true ) {
+  //       // clean up old instances and inline styles when available
+  //       if ( swiperBooks !== undefined ) swiperBooks.destroy( true, true );
+  //       // or/and do nothing
+  //       return;
+  //   // else if a small viewport and single column layout needed
+  //   } else if ( breakpoint.matches === false ) {
+  //       // fire small viewport version of swiper
+  //       if ( swiperBooks === undefined )
+  //       enableSwiper();
+
+  //       return;
+  //   }
+  // };
+
+  // enableSwiper();
+
+
+  //////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////
+  // keep an eye on viewport size changes
+  //breakpoint.addListener(breakpointChecker);
+
+
+  CheckSwiperBooks(breakpointSwiperBooks.matches);
+
 
 
   var swiperPertners = new Swiper('.swiper-container-partners', {
@@ -277,7 +318,63 @@ window.addEventListener('DOMContentLoaded', function() {
   // });
 });
 
-//window.addEventListener('resize', function() {
+var swiperBooks;
+
+function CreateSwiperBooks() {
+  swiperBooks = new Swiper('.books-swiper-container', {
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    watchOverflow: true,
+    noSwiping: false,
+    //slidesPerColumn: 2,
+    //slidesPerColumnFill: 'row',
+    //spaceBetween: 50,
+    pagination: {
+      el: '.books-swiper-pagination',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.books-swiper-button-next',
+      prevEl: '.books-swiper-button-prev',
+    },
+    breakpoints: {
+
+      // when window width is >= 1600px
+
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+      1600: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+      },
+
+
+    }
+  });
+}
+
+const breakpointSwiperBooks = window.matchMedia( '(max-width:760px)' );
+
+function CheckSwiperBooks(isOff) {
+  if(isOff === true) {
+    if(swiperBooks !== undefined && swiperBooks.destroyed === undefined)
+    {
+      swiperBooks.destroy(true, true);
+      console.log('Destroy SwiperBooks');
+    }
+  } else {
+    if(swiperBooks === undefined || swiperBooks.destroyed === true)
+    {
+      CreateSwiperBooks();
+      console.log('Create SwiperBooks');
+    }
+  }
+};
+
+
+window.addEventListener('resize', function() {
     // var elem = document.querySelector(".section-work-details");
     // var new_height = document.querySelector('[data-target="step1"]').offsetHeight;
     // if(new_height !== 0)
@@ -285,7 +382,7 @@ window.addEventListener('DOMContentLoaded', function() {
     //   elem.style.height = new_height+"px";
     // }
 
-
+    CheckSwiperBooks(breakpointSwiperBooks.matches);
 
     //var elem = document.querySelector(".catalogue-content-nav");
     //var currentPeriodsBlockWidth = elem.offsetWidth;
@@ -295,4 +392,4 @@ window.addEventListener('DOMContentLoaded', function() {
     //var elem = document.querySelector(".periods-content-list");
     //console.log(elem.style.column)
 
- //});
+ });
