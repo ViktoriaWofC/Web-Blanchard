@@ -148,6 +148,11 @@ h1 {
   flex-wrap: wrap;
 }
 
+.styles-item {
+  display: flex;
+  flex-direction: column;
+}
+
 .styles-item:not(:last-child) {
   margin-right: 5.01vw;
 }
@@ -172,8 +177,46 @@ h1 {
 
 .styles-item-link-arrow > path {
   stroke: white;
-
 }
+
+.styles-item-link-selected {
+/* turn arrow */
+}
+
+.styles-item-content {
+  position: relative;
+}
+
+.styles-item-content-scroll {
+  position: absolute;
+  top: 0px;
+  width: 300px;
+  height: 0;
+  transition: height .15s ease-in-out;
+}
+
+.styles-item-content-scroll-active {
+  height: 300px;
+}
+
+
+.simplebar-content-wrapper {
+  padding: 40px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: auto;
+}
+
+.simplebar-content {
+  font-size: 14px;
+  line-height: 170%;
+}
+
+.simplebar-scrollbar::before {
+  background: #CCB26E;
+  opacity: 1 !important;
+}
+
 
 .search-full {
   display: flex;

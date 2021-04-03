@@ -221,29 +221,41 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 
 
-  // document.querySelectorAll(".ui-accordion-content").forEach(function(el){
-  //   el.classList.remove("ui-accordion-content-active");
-  // });
 
-  // document.querySelector(".header-menu-icon").addEventListener("click", function(event) {
-  //   document.querySelector(".header-menu-panel").classList.toggle("header-menu-active");
-  //   document.querySelector(".header-menu-list").classList.toggle("header-menu-list-active");
-  // });
 
-  // document.querySelector(".header-menu-icon").addEventListener("keypress", function(event) {
-  //   if(event.keyCode == 13)
-  //   {
-  //     document.querySelector(".header-menu-panel").classList.toggle("header-menu-active");
-  //     document.querySelector(".header-menu-list").classList.toggle("header-menu-list-active");
-  //   }
-  // });
+  document.querySelectorAll(".styles-item-link").forEach(function(elem) {
+    elem.addEventListener("click", function(event){
+      ChangeScrollbarStateAction(event);
+    })
+    elem.addEventListener("keypress", function(event){
+      if(event.keyCode == 13) {
+        ChangeScrollbarStateAction(event);
+      }
+    })
+    elem.addEventListener("mouseleave", function(event){
+      document.querySelectorAll(".styles-item-content-scroll").forEach(function(el){
+        el.classList.remove("styles-item-content-scroll-active");
+      });
+    })
+  });
 
-  // document.querySelectorAll(".header-menu-item-link").forEach(function(elem) {
-  //   elem.target.addEventListener("click", function(event) {
-  //     document.querySelector(".header-menu-panel").classList.toggle("header-menu-active");
-  //     document.querySelector(".header-menu-list").classList.toggle("header-menu-list-active");
-  //   })
-  // });
+  function ChangeScrollbarStateAction(event) {
+    const path = event.currentTarget.dataset.path;
+
+    //add tab style
+    document.querySelectorAll(".styles-item-link").forEach(function(el){
+      el.classList.remove("styles-item-link-selected");
+    });
+    event.currentTarget.classList.add("styles-item-link-selected");
+
+    //add visible
+    document.querySelectorAll(".styles-item-content-scroll").forEach(function(el){
+      el.classList.remove("styles-item-content-scroll-active");
+    });
+    document.querySelector(`.styles-item-content-scroll[data-target="${path}"]`).classList.add("styles-item-content-scroll-active");
+  };
+
+
 });
 
 var swiperBooks;
