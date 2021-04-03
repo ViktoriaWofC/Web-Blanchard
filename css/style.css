@@ -503,19 +503,33 @@ h1 {
   border-radius: 50%;
 }
 
-.country-list-item-link:hover {
-  cursor: pointer;
+.country-list-item-selected {
+  border: 2px solid var(--color-violet);
 }
 
 .country-icon {
-  width: 46px;
-  height: 46px;
+  width: 47px;
+  height: 47px;
   background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  transition: border, box-shadow;
+  transition-duration: .15s;
+  transition-timing-function: ease-in-out;
 }
 
-.country-icon-selected {
-  border: 2px solid var(--color-violet);
+.country-icon:hover {
+  cursor: pointer;
+  box-shadow: 0 0 13px var(--color-violet);
 }
+
+
+.country-icon:active {
+  border: 2px solid var(--color-violet);
+  box-shadow: none
+}
+
+
 
 .country-icon-french {
   background-image: url('/img/French-flag.png');

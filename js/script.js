@@ -57,35 +57,32 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 
+  document.querySelectorAll(".country-list-item-link").forEach(function(elem) {
+    elem.addEventListener("click", function(event){
+      ChangeCountyTabAction(event);
+    })
+    elem.addEventListener("keypress", function(event){
+      if(event.keyCode == 13) {
+        ChangeCountyTabAction(event);
+      }
+    })
+  });
 
+  function ChangeCountyTabAction(event) {
+    const path = event.currentTarget.dataset.path;
 
+      //add tab style
+      document.querySelectorAll(".country-list-item-link").forEach(function(el){
+        el.classList.remove("country-list-item-selected");
+      });
+      event.currentTarget.classList.add("country-list-item-selected");
 
-  // document.querySelectorAll(".nav-work-item-link").forEach(function(elem) {
-  //   elem.addEventListener("click", function(event){
-  //     ChangeTabAction(event);
-  //   })
-  //   elem.addEventListener("keypress", function(event){
-  //     if(event.keyCode == 13) {
-  //       ChangeTabAction(event);
-  //     }
-  //   })
-  // });
-
-  // function ChangeTabAction(event) {
-  //   const path = event.currentTarget.dataset.path;
-
-  //     //add tab style
-  //     document.querySelectorAll(".nav-work-item-link").forEach(function(el){
-  //       el.classList.remove("nav-work-item-selected");
-  //     });
-  //     event.target.classList.add("nav-work-item-selected");
-
-  //     //add visible
-  //     document.querySelectorAll(".work-item").forEach(function(el){
-  //       el.classList.remove("work-item-active");
-  //     });
-  //     document.querySelector(`[data-target="${path}"]`).classList.add("work-item-active");
-  // };
+      //add visible
+      // document.querySelectorAll(".work-item").forEach(function(el){
+      //   el.classList.remove("work-item-active");
+      // });
+      // document.querySelector(`[data-target="${path}"]`).classList.add("work-item-active");
+  };
 
   $( function() {
     $( "#accordion" ).accordion({
