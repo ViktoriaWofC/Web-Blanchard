@@ -2285,6 +2285,19 @@ h1 {
     width: 595px;
   }
 
+  .country-list {
+    transform: translateY(8px);
+  }
+
+  .catalogue-description {
+    margin-top: 24px;
+    padding-left: 1px;
+  }
+
+  .catalogue-content {
+    flex-wrap: wrap-reverse;
+  }
+
   .event-card-content {
     margin-top: 195px;
   }
@@ -2323,6 +2336,8 @@ h1 {
   .header-container {
     height: 13vw;
   }
+
+
 
 }
 
