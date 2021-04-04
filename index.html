@@ -486,7 +486,7 @@
                 </div>
               </div>
               <div class="periods-content">
-                <ul class="periods-content-list periods-content-list-1400">
+                <ul class="periods-content-list">
                   <li>Бенедетто ди Биндо</li>
                   <li>Бергоньоне, Амброджо</li>
                   <li>Биссоло, Франческо</li>
@@ -694,7 +694,7 @@
               </div>
 
             </div>
-            <div class="swiper-pagination pagination-hidden"></div>
+            <div class="swiper-pagination events-swiper-pagination pagination-hidden"></div>
 
           </div>
 
@@ -963,7 +963,6 @@
     </section>
 
 
-
     <section id="projects" class="section-projects">
       <div class="container projects-container">
         <h1 class="section-heading" tabindex="0">
@@ -1049,13 +1048,18 @@
             </div>
           </div>
 
-          <form action="" method="POST" class="contacts-details-form details-form">
+          <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="contacts-details-form details-form">
             <div class="details-form-heading" tabindex="0">
               Заказать обратный звонок
             </div>
-            <input type="text" class="details-form-input" name="name" aria-label="Введите имя" placeholder="Имя*" required/>
+            <label class="details-form-label">
+              <input type="text" class="details-form-input" name="name" data-validate-field="name" aria-label="Введите имя" placeholder="Имя*" required/>
+            </label>
 
-            <input type="tel" class="details-form-input" name="tel" aria-label="Введите телефон" placeholder="Телефон*" required/>
+            <label class="details-form-label">
+              <input type="tel" class="details-form-input" name="tel" data-validate-field="tel" aria-label="Введите телефон" placeholder="Телефон*" required/>
+            </label>
+
 
             <button type="submit" class="details-form-btn">
               <div class="details-form-btn-text">
@@ -1070,8 +1074,8 @@
             </div>
 
             <div class="details-social-icons">
-              <a href="" class="details-social-icon icons-whatsapp" tabindex="0"></a>
-              <a href="" class="details-social-icon icons-telegram" tabindex="0"></a>
+              <a href="whatsapp://send/?phone=+79871234567" class="details-social-icon icons-whatsapp" tabindex="0"  target="_blank"></a>
+              <a href="tg://resolve?domain=userinfobot" class="details-social-icon icons-telegram" tabindex="0"  target="_blank"></a>
             </div>
           </div>
         </div>
@@ -1090,9 +1094,9 @@
       </a>
 
       <div class="footer-icons">
-        <a href="" class="footer-icon footer-icon-vk" tabindex="0" aria-label="Иконка ВКонтакте"></a>
-        <a href="" class="footer-icon footer-icon-instagram" tabindex="0" aria-label="Иконка Инстаграм"></a>
-        <a href="" class="footer-icon footer-icon-fb" tabindex="0" aria-label="Иконка Фейсбук"></a>
+        <a href="http://vk.com/vk.cats" class="footer-icon footer-icon-vk" tabindex="0" aria-label="Иконка ВКонтакте"  target="_blank"></a>
+        <a href="https://www.instagram.com/cats_of_instagram/" class="footer-icon footer-icon-instagram" tabindex="0" aria-label="Иконка Инстаграм"  target="_blank"></a>
+        <a href="https://www.facebook.com/welovecatsandkittens/" class="footer-icon footer-icon-fb" tabindex="0" aria-label="Иконка Фейсбук"  target="_blank"></a>
       </div>
 
     </div>

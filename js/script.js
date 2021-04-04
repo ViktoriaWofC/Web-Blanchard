@@ -32,28 +32,19 @@ window.addEventListener('DOMContentLoaded', function() {
   });
 
 
+  document.querySelector(".section-hero-button").addEventListener('click', function(event){
+    var element = document.getElementById("contacts");
+    element.scrollIntoView({behavior: "smooth"});
+  });
 
-  var swiperEvents = new Swiper('.swiper-container-events', {
-    slidesPerView: 1,
-    //slidesPerColumn: 2,
-    //slidesPerColumnFill: 'row',
-    //spaceBetween: 30,
-    watchOverflow: true,
-    noSwiping: false,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    breakpoints: {
-      // when window width is >= 1600px
-        320: {
-        slidesPerView: 5,
-        noSwiping: true
-          //slidesPerView: 2,
-          //slidesPerColumn: 3,
-        }
+  document.querySelector(".section-hero-button").addEventListener('keypress', function(event){
+    if(event.keyCode == 13) {
+      var element = document.getElementById("contacts");
+      element.scrollIntoView({behavior: "smooth"});
     }
   });
+
+
 
   document.querySelectorAll(".country-list-item-link").forEach(function(elem) {
     elem.addEventListener("click", function(event){
@@ -118,7 +109,6 @@ window.addEventListener('DOMContentLoaded', function() {
   } );
 
 
-
   document.querySelector(".periods-link").click();
 
 
@@ -160,7 +150,7 @@ window.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-
+  CheckSwiperEvents(breakpointSwiperEvents.matches);
 
 
   CheckSwiperBooks(breakpointSwiperBooks.matches);
@@ -193,30 +183,30 @@ window.addEventListener('DOMContentLoaded', function() {
 
   // Функция ymaps.ready() будет вызвана, когда
   // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-  // ymaps.ready(init);
-  // function init(){
-  //     // Создание карты.
-  //     var myMap = new ymaps.Map("map", {
-  //         // Координаты центра карты.
-  //         // Порядок по умолчанию: «широта, долгота».
-  //         // Чтобы не определять координаты центра карты вручную,
-  //         // воспользуйтесь инструментом Определение координат.
-  //         center: [55.763463,37.611079],
-  //         // Уровень масштабирования. Допустимые значения:
-  //         // от 0 (весь мир) до 19.
-  //         zoom: 14,
-  //         controls: ['geolocationControl', 'zoomControl']
-  //     });
+  ymaps.ready(init);
+  function init(){
+      // Создание карты.
+      var myMap = new ymaps.Map("map", {
+          // Координаты центра карты.
+          // Порядок по умолчанию: «широта, долгота».
+          // Чтобы не определять координаты центра карты вручную,
+          // воспользуйтесь инструментом Определение координат.
+          center: [55.763463,37.611079],
+          // Уровень масштабирования. Допустимые значения:
+          // от 0 (весь мир) до 19.
+          zoom: 14,
+          controls: ['geolocationControl', 'zoomControl']
+      });
 
-  //     myMap.controls.get('zoomControl').options.set('size', 'small');
+      myMap.controls.get('zoomControl').options.set('size', 'small');
 
-  //     var myPlacemark = new ymaps.Placemark([55.758463,37.601079], {}, {
-  //       iconLayout: 'default#image',
-  //       iconImageHref: '/img/map_point.png',
-  //       iconImageSize: [20, 20]
-  //     });
-  //     myMap.geoObjects.add(myPlacemark);
-  // }
+      var myPlacemark = new ymaps.Placemark([55.758463,37.601079], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: '/img/map_point.png',
+        iconImageSize: [20, 20]
+      });
+      myMap.geoObjects.add(myPlacemark);
+  }
 
 
 
@@ -310,6 +300,30 @@ window.addEventListener('DOMContentLoaded', function() {
   });
 
 
+  var selector = document.querySelector("input[type='tel']");
+  var im = new Inputmask("+7 (999) 999-99-99");
+  im.mask(selector);
+
+  var validate = new JustValidate('.contacts-details-form', {
+    rules: {
+      name: {
+        required: true,
+        minLength: 2,
+        maxLength: 20
+      },
+      tel: {
+        required: true,
+        function: (name, value) => {
+          const phone = selector.inputmask.unmaskedvalue();
+          return Number(phone) && phone.length === 10
+        }
+      }
+    },
+    messages: {
+      name: 'Как вас зовут?',
+      tel: 'Укажите ваш телефон'
+    }
+  });
 
 
 
@@ -375,22 +389,40 @@ function CheckSwiperBooks(isOff) {
   }
 };
 
+
+var swiperEvents;
+
+function CreateSwiperEvents() {
+  swiperEvents = new Swiper('.swiper-container-events', {
+    slidesPerView: 1,
+    watchOverflow: true,
+    noSwiping: false,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    }
+  });
+}
+
+const breakpointSwiperEvents = window.matchMedia( '(max-width:760px)' );
+
+function CheckSwiperEvents(isOn) {
+  if(isOn === true) {
+    if(swiperEvents === undefined || swiperEvents.destroyed === true)
+    {
+      CreateSwiperEvents();
+      console.log('Create SwiperEvents');
+    }
+  } else {
+    if(swiperEvents !== undefined && swiperEvents.destroyed === undefined)
+    {
+      swiperEvents.destroy(true, true);
+      console.log('Destroy SwiperEvents');
+    }
+  }
+};
+
 window.addEventListener('resize', function() {
-    // var elem = document.querySelector(".section-work-details");
-    // var new_height = document.querySelector('[data-target="step1"]').offsetHeight;
-    // if(new_height !== 0)
-    // {
-    //   elem.style.height = new_height+"px";
-    // }
-
     CheckSwiperBooks(breakpointSwiperBooks.matches);
-
-    //var elem = document.querySelector(".catalogue-content-nav");
-    //var currentPeriodsBlockWidth = elem.offsetWidth;
-    //console.log(currentPeriodsBlockWidth)
-    //".periods-content-list"
-
-    //var elem = document.querySelector(".periods-content-list");
-    //console.log(elem.style.column)
-
+    CheckSwiperEvents(breakpointSwiperEvents.matches);
  });
