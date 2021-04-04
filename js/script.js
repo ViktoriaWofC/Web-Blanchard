@@ -278,6 +278,41 @@ window.addEventListener('DOMContentLoaded', function() {
     })
   });
 
+  document.querySelectorAll(".category-checkbox").forEach(function(elem) {
+    elem.addEventListener("change", function(event) {
+      var checkbox = event.target;
+      var label = event.currentTarget.parentElement;
+      if(checkbox.checked){
+        label.setAttribute("aria-checked", true);
+      }
+      else {
+        label.setAttribute("aria-checked", false);
+      }
+    });
+  });
+
+  document.querySelectorAll(".category-label").forEach(function(elem) {
+    elem.addEventListener("keypress", function(event) {
+      if(event.keyCode == 13)
+      {
+        var checkbox = event.currentTarget.querySelector("input");
+        var label = event.currentTarget;
+        if(label.getAttribute("aria-checked")){
+          checkbox.checked = false;
+          label.setAttribute("aria-checked", false);
+        }
+        else {
+          checkbox.checked = true;
+          label.setAttribute("aria-checked", true);
+        }
+      }
+    });
+  });
+
+
+
+
+
 
 
 });
@@ -289,10 +324,6 @@ function CreateSwiperBooks() {
     slidesPerView: 1,
     slidesPerGroup: 1,
     watchOverflow: true,
-    //noSwiping: false,
-    //slidesPerColumn: 2,
-    //slidesPerColumnFill: 'row',
-    //spaceBetween: 50,
     pagination: {
       el: '.books-swiper-pagination',
       type: 'fraction',

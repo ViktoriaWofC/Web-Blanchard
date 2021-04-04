@@ -85,7 +85,7 @@
 
 
           <div class="header-logo">
-            <a href="">
+            <a href="" tabindex="0">
               <img src="/img/Logo.png" alt="Логотип">
             </a>
           </div>
@@ -118,7 +118,7 @@
             </nav>
 
             <div class="header-nav-login">
-              <a class="header-nav-login-link main-violet-link">
+              <a class="header-nav-login-link main-violet-link" tabindex="0">
                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
                 </svg>
@@ -141,6 +141,7 @@
   </header>
 
   <main>
+
     <section class="section-hero">
       <div class="container section-hero-menu">
         <nav>
@@ -258,7 +259,7 @@
     <section id="gallery" class="section-gallery">
       <div class="container gallery-container">
         <div class="gallery-filter">
-          <h1 class="section-heading section-heading-gallery">
+          <h1 class="section-heading section-heading-gallery" tabindex="0">
             Галерея
           </h1>
 
@@ -485,7 +486,7 @@
                 </div>
               </div>
               <div class="periods-content">
-                <ul>
+                <ul class="periods-content-list periods-content-list-1400">
                   <li>Бенедетто ди Биндо</li>
                   <li>Бергоньоне, Амброджо</li>
                   <li>Биссоло, Франческо</li>
@@ -504,7 +505,7 @@
                 </div>
               </div>
               <div class="periods-content">
-                <ul>
+                <ul class="periods-content-list">
                   <li>Бенедетто ди Биндо</li>
                   <li>Бергоньоне, Амброджо</li>
                   <li>Биссоло, Франческо</li>
@@ -523,7 +524,7 @@
                 </div>
               </div>
               <div class="periods-content">
-                <ul>
+                <ul class="periods-content-list">
                   <li>Бенедетто ди Биндо</li>
                   <li>Бергоньоне, Амброджо</li>
                   <li>Биссоло, Франческо</li>
@@ -542,7 +543,7 @@
                 </div>
               </div>
               <div class="periods-content">
-                <ul>
+                <ul class="periods-content-list">
                   <li>Бенедетто ди Биндо</li>
                   <li>Бергоньоне, Амброджо</li>
                   <li>Биссоло, Франческо</li>
@@ -561,7 +562,7 @@
                 </div>
               </div>
               <div class="periods-content">
-                <ul>
+                <ul class="periods-content-list">
                   <li>Бенедетто ди Биндо</li>
                   <li>Бергоньоне, Амброджо</li>
                   <li>Биссоло, Франческо</li>
@@ -580,7 +581,7 @@
                 </div>
               </div>
               <div class="periods-content">
-                <ul>
+                <ul class="periods-content-list">
                   <li>Бенедетто ди Биндо</li>
                   <li>Бергоньоне, Амброджо</li>
                   <li>Биссоло, Франческо</li>
@@ -596,7 +597,7 @@
 
     <section id="events" class="section-events">
       <div class="container events-container">
-        <h1 class="section-heading section-heading-events">
+        <h1 class="section-heading section-heading-events" tabindex="0">
           События
         </h1>
 
@@ -713,7 +714,9 @@
       <div class="container books-container">
 
         <div class="books-filter">
-          <h1 class="section-heading section-books-heading">Издания</h1>
+          <h1 class="section-heading section-books-heading" tabindex="0">
+            Издания
+          </h1>
 
           <div class="books-filter-categories categories">
             <div class="categories-heading">
@@ -762,7 +765,7 @@
               </li>
 
               <li class="categories-list-item category">
-                <label class="category-label" tabindex="0">
+                <label class="category-label" tabindex="0" role="checkbox">
                   <input type="checkbox" class="category-checkbox">
                   Детям
                   <span></span>
@@ -841,6 +844,12 @@
         </div>
 
         <div class="books-swiper">
+
+          <div class="swiper-pagination books-swiper-pagination"></div>
+
+          <div class="swiper-button-prev swiper-btn books-swiper-button-prev books-swiper-btn" tabindex="0"></div>
+          <div class="swiper-button-next swiper-btn books-swiper-button-next books-swiper-btn" tabindex="0"></div>
+
 
           <div class="swiper-container books-swiper-container">
 
@@ -948,12 +957,6 @@
 
           </div>
 
-          <div class="swiper-pagination books-swiper-pagination"></div>
-
-          <div class="swiper-button-prev swiper-btn books-swiper-button-prev books-swiper-btn" tabindex="0"></div>
-          <div class="swiper-button-next swiper-btn books-swiper-button-next books-swiper-btn" tabindex="0"></div>
-
-
         </div>
 
       </div>
@@ -963,28 +966,28 @@
 
     <section id="projects" class="section-projects">
       <div class="container projects-container">
-        <h1 class="section-heading">
+        <h1 class="section-heading" tabindex="0">
           Проекты
         </h1>
 
         <div class="projects-description">
           Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно&#8209;пропагандистское
           <div class="projects-tooltip tooltip">
-            <div class="tooltip-marker"></div>
+            <div class="tooltip-marker" tabindex="0"></div>
             <div class="tooltip-popup">
               Пример современных тенденций - современная методология разработки
             </div>
           </div>
           обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены
           <div class="projects-tooltip tooltip">
-            <div class="tooltip-marker"></div>
+            <div class="tooltip-marker" tabindex="0"></div>
             <div class="tooltip-popup">
               Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции
             </div>
           </div>
           исключительно в разрезе маркетинговых и финансовых
           <div class="projects-tooltip tooltip">
-            <div class="tooltip-marker"></div>
+            <div class="tooltip-marker" tabindex="0"></div>
             <div class="tooltip-popup">
               В стремлении повысить качество
             </div>
@@ -1026,7 +1029,7 @@
 
     <section id="contacts" class="section-contacts">
       <div class="container contacts-container">
-        <h1 class="section-heading">
+        <h1 class="section-heading" tabindex="0">
           Контакты
         </h1>
       </div>
@@ -1054,7 +1057,11 @@
 
             <input type="tel" class="details-form-input" name="tel" aria-label="Введите телефон" placeholder="Телефон*" required/>
 
-            <button type="submit" class="details-form-btn">Заказать</button>
+            <button type="submit" class="details-form-btn">
+              <div class="details-form-btn-text">
+                Заказать
+              </div>
+            </button>
           </form>
 
           <div class="contacts-details-social details-social">
@@ -1063,8 +1070,8 @@
             </div>
 
             <div class="details-social-icons">
-              <a href="" class="details-social-icon icons-whatsapp"></a>
-              <a href="" class="details-social-icon icons-telegram"></a>
+              <a href="" class="details-social-icon icons-whatsapp" tabindex="0"></a>
+              <a href="" class="details-social-icon icons-telegram" tabindex="0"></a>
             </div>
           </div>
         </div>
@@ -1078,7 +1085,7 @@
   <footer class="footer">
     <div class="container footer-container">
 
-      <a href=""  class="footer-logo">
+      <a href=""  class="footer-logo" tabindex="0">
         <img src="/img/Logo.png" alt="Логотип">
       </a>
 
