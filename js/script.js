@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', function() {
     },
     breakpoints: {
       // when window width is >= 1600px
-      1600: {
+      1601: {
         slidesPerView: 3,
         slidesPerColumn: 2,
         slidesPerGroup: 3

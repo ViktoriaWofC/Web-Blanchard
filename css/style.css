@@ -2162,10 +2162,13 @@ h1 {
     padding-right: 25px;
   }
 
-  /* .events-container {
-    padding-left: 7.5vw;
-    padding-right: 4vw;
-  } */
+  .section-gallery {
+    height: 839px;
+  }
+
+  .gallery-filter {
+    height: 680px;
+  }
 
   .gallery-swiper-container {
     height: 640px;
@@ -2230,8 +2233,8 @@ h1 {
 @media (max-width: 1024px) {
 
   .container {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 48px;
+    padding-right: 48px;
   }
 
   .header-container {
@@ -2259,6 +2262,23 @@ h1 {
 
   .gallery-swiper-container {
     height: 595px;
+  }
+
+  .section-heading {
+    margin-left: 0px;
+  }
+
+  .section-about-content {
+    margin-left: 0px;
+    margin-right: 5px;
+  }
+
+  .gallery-filter {
+    width: 283px;
+  }
+
+  .gallery-filter-selector-label {
+    margin-left: 2px;
   }
 
   .gallery-swiper {
