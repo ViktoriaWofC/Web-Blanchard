@@ -39,34 +39,51 @@
 <body>
   <header class="header">
       <div class="container header-container">
-        <!-- <div class="header-menu-icon" tabindex="0" aria-label="Меню" role="button">
-          <svg width="30" height="23" viewBox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="30" height="3" fill="#333333"/>
-            <rect y="10" width="30" height="3" fill="#333333"/>
-            <rect y="20" width="30" height="3" fill="#333333"/>
-          </svg>
-        </div> -->
 
-        <!-- <div class="header-menu-panel">
-          <ul class="header-menu-list">
-            <li class="header-menu-item">
-              <a href="" class="header-menu-item-link">О нас</a>
-            </li>
-            <li class="header-menu-item">
-              <a href="" class="header-menu-item-link">Проекты</a>
-            </li>
-            <li class="header-menu-item">
-              <a href="" class="header-menu-item-link">Этапы</a>
-            </li>
-            <li class="header-menu-item">
-              <a href="" class="header-menu-item-link">Отзывы</a>
-            </li>
-            <li class="header-menu-item">
-              <a href="" class="header-menu-item-link">Контакты</a>
-            </li>
-          </ul>
-        </div> -->
         <div class="header-main">
+          <div class="header-menu-icon" tabindex="0" aria-label="Меню" role="button">
+            <svg width="36" height="29" viewBox="0 0 36 29" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <rect width="36" height="3.65217" transform="matrix(-1 0 0 1 36 0.699997)" fill="white"/>
+              <path d="M28.2002 12.8739H0.00019455V16.5261H28.2002V12.8739Z" fill="white"/>
+              <path d="M24 25.0478H0V28.7H24V25.0478Z" fill="white"/>
+            </svg>
+          </div>
+
+          <div class="header-menu-panel menu-panel">
+            <ul class="menu-panel-list">
+              <li class="menu-panel-list-item">
+                <a href="#about" class="menu-panel-list-item-link">О нас</a>
+              </li>
+              <li class="menu-panel-list-item">
+                <a href="#gallery" class="menu-panel-list-item-link">Галерея</a>
+              </li>
+              <li class="menu-panel-list-item">
+                <a href="#catalogue" class="menu-panel-list-item-link">Каталог</a>
+              </li>
+              <li class="menu-panel-list-item">
+                <a href="#events" class="menu-panel-list-item-link">События</a>
+              </li>
+              <li class="menu-panel-list-item">
+                <a href="#books" class="menu-panel-list-item-link">Издания</a>
+              </li>
+              <li class="menu-panel-list-item">
+                <a href="#projects" class="menu-panel-list-item-link">Проекты</a>
+              </li>
+              <li class="menu-panel-list-item">
+                <a href="#contacts" class="menu-panel-list-item-link">Контакты</a>
+              </li>
+            </ul>
+            <div class="menu-panel-login">
+              <a class="menu-panel-login-link">
+                <svg width="25" height="25" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="black"/>
+                </svg>
+                Войти
+              </a>
+            </div>
+          </div>
+
+
           <div class="header-logo">
             <a href="">
               <img src="/img/Logo.png" alt="Логотип">
@@ -77,25 +94,25 @@
             <nav class="header-nav-menu nav-menu">
               <ul class="nav-menu-list">
                 <li class="nav-menu-item">
-                  <a href="" class="nav-menu-item-link">О нас</a>
+                  <a href="#about" class="nav-menu-item-link">О нас</a>
                 </li>
                 <li class="nav-menu-item">
-                  <a href="" class="nav-menu-item-link">Галерея</a>
+                  <a href="#gallery" class="nav-menu-item-link">Галерея</a>
                 </li>
                 <li class="nav-menu-item">
-                  <a href="" class="nav-menu-item-link">Каталог</a>
+                  <a href="#catalogue" class="nav-menu-item-link">Каталог</a>
                 </li>
                 <li class="nav-menu-item">
-                  <a href="" class="nav-menu-item-link">События</a>
+                  <a href="#events" class="nav-menu-item-link">События</a>
                 </li>
                 <li class="nav-menu-item">
-                  <a href="" class="nav-menu-item-link">Издания</a>
+                  <a href="#books" class="nav-menu-item-link">Издания</a>
                 </li>
                 <li class="nav-menu-item">
-                  <a href="" class="nav-menu-item-link">Проекты</a>
+                  <a href="#projects" class="nav-menu-item-link">Проекты</a>
                 </li>
                 <li class="nav-menu-item">
-                  <a href="" class="nav-menu-item-link">Контакты</a>
+                  <a href="#contacts" class="nav-menu-item-link">Контакты</a>
                 </li>
               </ul>
             </nav>
@@ -116,10 +133,6 @@
             </svg>
           </div>
         </div>
-
-
-
-
 
       </div>
   </header>
@@ -224,7 +237,7 @@
       </div>
     </section>
 
-    <section class="section-about">
+    <section id="about" class="section-about">
       <div class="container section-about-container">
         <h1 class="section-heading" tabindex="0">
           О нас
@@ -235,7 +248,7 @@
       </div>
     </section>
 
-    <section class="section-gallery">
+    <section id="gallery" class="section-gallery">
       <div class="container gallery-container">
         <div class="gallery-filter">
           <h1 class="section-heading section-heading-gallery">
@@ -320,7 +333,7 @@
       </div>
     </section>
 
-    <section class="section-catalogue">
+    <section id="catalogue" class="section-catalogue">
       <div class="container catalogue-container">
 
         <div class="catalogue-top">
@@ -574,7 +587,7 @@
       </div>
     </section>
 
-    <section class="section-events">
+    <section id="events" class="section-events">
       <div class="container events-container">
         <h1 class="section-heading section-heading-events">
           События
@@ -689,7 +702,7 @@
       </div>
     </section>
 
-    <section class="section-books">
+    <section id="books" class="section-books">
       <div class="container books-container">
 
         <div class="books-filter">
@@ -941,7 +954,7 @@
 
 
 
-    <section class="section-projects">
+    <section id="projects" class="section-projects">
       <div class="container projects-container">
         <h1 class="section-heading">
           Проекты
@@ -1004,7 +1017,7 @@
 
 
 
-    <section class="section-contacts">
+    <section id="contacts" class="section-contacts">
       <div class="container contacts-container">
         <h1 class="section-heading">
           Контакты
