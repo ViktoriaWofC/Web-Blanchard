@@ -149,6 +149,7 @@ h1 {
 }
 
 .styles-item {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -168,42 +169,70 @@ h1 {
   line-height: 25px;
   font-weight: 400;
   color: white;
+  transition: color .15s ease-in-out;
 }
 
 .styles-item-link-arrow {
   margin-left: 4px;
   margin-top: 11px;
+  transition-property: stroke, transform;
+  transition-duration: .15s;
+  transition-timing-function: ease-in-out;
 }
 
-.styles-item-link-arrow > path {
-  stroke: white;
+.styles-item-link:hover {
+  cursor: pointer;
+  color: var(--color-violet);
 }
 
-.styles-item-link-selected {
-/* turn arrow */
+.styles-item-link:active {
+  color: var(--color-violet-dark);
+}
+
+.styles-item-link:focus-visible {
+  outline: 2px solid var(--color-violet-dark) !important;
+}
+
+.styles-item-link:hover > svg > path {
+  stroke: var(--color-violet);
+}
+
+.styles-item-link:active > svg > path {
+  stroke: var(--color-violet-dark);
+}
+
+
+.styles-item-link-selected > svg {
+  transform: rotate(180deg);
 }
 
 .styles-item-content {
-  position: relative;
+  position: absolute;
+  top: 47px;
+  width: 300px;
+  height: 0px;
+  padding-left: 40px;
+  padding-right: 20px;
+  padding-bottom: 0px;
+  box-sizing: content-box;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition-property: height, padding-bottom;
+  transition-duration: .15s;
+  transition-timing-function: ease-in-out;
+}
+
+.styles-item-content-active {
+  height: 300px;
+  padding-bottom: 40px;
 }
 
 .styles-item-content-scroll {
-  position: absolute;
-  top: 0px;
-  width: 300px;
-  height: 0;
-  transition: height .15s ease-in-out;
+  width: 100%;
+  height: 100%;
 }
-
-.styles-item-content-scroll-active {
-  height: 300px;
-}
-
 
 .simplebar-content-wrapper {
-  padding: 40px;
   color: white;
-  background-color: rgba(0, 0, 0, 0.4);
   overflow: auto;
 }
 
@@ -212,9 +241,32 @@ h1 {
   line-height: 170%;
 }
 
+.simplebar-track {
+  width: 3px !important;
+  background-color: black;
+}
+
+.simplebar-scrollbar {
+  width: 100%;
+}
+
 .simplebar-scrollbar::before {
-  background: #CCB26E;
+  top: 0px !important;
+  bottom: 0px !important;
+  left: 0px !important;
+  right: inherit;: 0px !important;
+  border-radius: 0px;
+  background: var(--color-violet);
   opacity: 1 !important;
+}
+
+.content-scroll-list-item {
+  width: 100%;
+  height: 40px;
+}
+
+.content-scroll-list-item:not(:last-child) {
+  margin-bottom: 15px;
 }
 
 

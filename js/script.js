@@ -232,9 +232,10 @@ window.addEventListener('DOMContentLoaded', function() {
         ChangeScrollbarStateAction(event);
       }
     })
-    elem.addEventListener("mouseleave", function(event){
-      document.querySelectorAll(".styles-item-content-scroll").forEach(function(el){
-        el.classList.remove("styles-item-content-scroll-active");
+    elem.addEventListener("blur", function(event){
+      event.currentTarget.classList.remove("styles-item-link-selected");
+      document.querySelectorAll(".styles-item-content").forEach(function(el){
+        el.classList.remove("styles-item-content-active");
       });
     })
   });
@@ -242,17 +243,23 @@ window.addEventListener('DOMContentLoaded', function() {
   function ChangeScrollbarStateAction(event) {
     const path = event.currentTarget.dataset.path;
 
-    //add tab style
-    document.querySelectorAll(".styles-item-link").forEach(function(el){
-      el.classList.remove("styles-item-link-selected");
-    });
-    event.currentTarget.classList.add("styles-item-link-selected");
+    if(event.currentTarget.classList.contains('styles-item-link-selected')) {
+      event.currentTarget.classList.remove("styles-item-link-selected");
+      document.querySelector(`.styles-item-content[data-target="${path}"]`).classList.remove("styles-item-content-active");
+    }
+    else {
+      //add tab style
+      document.querySelectorAll(".styles-item-link").forEach(function(el){
+        el.classList.remove("styles-item-link-selected");
+      });
+      event.currentTarget.classList.add("styles-item-link-selected");
 
-    //add visible
-    document.querySelectorAll(".styles-item-content-scroll").forEach(function(el){
-      el.classList.remove("styles-item-content-scroll-active");
-    });
-    document.querySelector(`.styles-item-content-scroll[data-target="${path}"]`).classList.add("styles-item-content-scroll-active");
+      //add visible
+      document.querySelectorAll(".styles-item-content").forEach(function(el){
+        el.classList.remove("styles-item-content-active");
+      });
+      document.querySelector(`.styles-item-content[data-target="${path}"]`).classList.add("styles-item-content-active");
+    }
   };
 
 
