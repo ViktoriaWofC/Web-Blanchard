@@ -2297,11 +2297,11 @@ h1 {
   }
 
   .catalogue-content {
-    padding-left: 0px;
+    padding-left: 1px;
   }
 
   .catalogue-content-info {
-    margin-right: 4.88vw;
+    margin-right: 4.84vw;
     width: 42.8vw;
   }
 
@@ -2321,11 +2321,16 @@ h1 {
   }
 
   .periods-content {
-    padding-top: 23px;
+    padding-top: 24px;
+  }
+
+  .periods-content-list {
+    align-content: space-between;
   }
 
   .periods-content-list > li {
-    margin-right: 4.78vw;
+    margin-right: 1.27vw;
+    width: fit-content;
   }
 
   .event-card-content {
@@ -2354,7 +2359,32 @@ h1 {
 
 }
 
+@media (max-width: 920px) {
+  .catalogue-content {
+    flex-wrap: wrap-reverse;
+  }
 
+  .catalogue-content-nav {
+    max-width: 100%;
+  }
+
+  .periods-content-list-1400 {
+    height: 320px;
+  }
+
+  .catalogue-content-info {
+    margin-right: 0px;
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .catalogue-card-img {
+    width: 100%;
+    height: auto;
+  }
+
+
+}
 
 @media (max-width: 768px) {
 
