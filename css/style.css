@@ -977,7 +977,9 @@ h1 {
 
 .catalogue-card-img {
   width: 39vw;
+  min-width: 434px;
   height: 24.48vw;
+  min-height: 273px;;
 }
 
 .catalogue-card-description {
@@ -2159,7 +2161,7 @@ h1 {
 @media (max-width: 1600px) {
   .periods-content-list-1400 {
     height: 384px;
-    padding-right: 25px;
+    padding-right: 0px;
   }
 
   .section-gallery {
@@ -2295,7 +2297,35 @@ h1 {
   }
 
   .catalogue-content {
-    flex-wrap: wrap-reverse;
+    padding-left: 0px;
+  }
+
+  .catalogue-content-info {
+    margin-right: 4.88vw;
+    width: 42.8vw;
+  }
+
+  .catalogue-card-img {
+    width: 42.7vw;
+    min-width: 0;
+    height: 26.66vw;
+    min-height: 0;
+  }
+
+  .catalogue-content-nav {
+    max-width: 440px;
+  }
+
+  .catalogue-card-description-details {
+    padding-left: 2px;
+  }
+
+  .periods-content {
+    padding-top: 23px;
+  }
+
+  .periods-content-list > li {
+    margin-right: 4.78vw;
   }
 
   .event-card-content {
@@ -2337,7 +2367,9 @@ h1 {
     height: 13vw;
   }
 
-
+  .catalogue-content {
+    flex-wrap: wrap-reverse;
+  }
 
 }
 
