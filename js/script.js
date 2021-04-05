@@ -352,12 +352,17 @@ function CreateSwiperBooks() {
       768: {
         slidesPerView: 2,
         slidesPerGroup: 2,
-        //spaceBetween: 30
+        spaceBetween: 30
+      },
+      921: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 20
       },
       1000: {
         slidesPerView: 2,
         slidesPerGroup: 2,
-        spaceBetween: 45
+        spaceBetween: 44
       },
       1600: {
         slidesPerView: 3,

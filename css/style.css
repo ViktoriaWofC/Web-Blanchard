@@ -1469,6 +1469,7 @@ h1 {
   display: flex;
   align-items: center;
   margin-bottom: 3px;
+  width: 277px;
   height: 40px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 6px;
@@ -2362,7 +2363,6 @@ h1 {
     margin-top: 50px;
   }
 
-
   .event-card-img-1 {
     background-image: url('/img/events/Event-1-290.png');
   }
@@ -2383,7 +2383,60 @@ h1 {
     background-image: url('/img/events/Event-2-290.png');
   }
 
+  .books-container {
+    /* display: flex;
+    flex-wrap: wrap; */
+    padding-left: 45px;
+    padding-right: 48px;
+  }
+
+  .books-swiper {
+    margin-right: 2px;
+    width: 62vw;
+  }
+
+  .books-card-img {
+    width: 28.32vw;
+    min-width: 200px;
+  }
+
+  .books-card-details-title {
+    top: 10px;
+  }
+
+  .books-card-details-author {
+    top: 33px;
+  }
+
+  .books-card-details-price {
+    top: 11px;
+    right: 1px;
+    font-size: 15px;
+  }
+
+  .books-card-details-button {
+    top: 66px;
+  }
+
+  .books-card-details-button-btn {
+    padding-bottom: 7px;
+  }
+
+  .books-swiper-pagination {
+    left: 40px;
+  }
+
+  .books-swiper-button-prev {
+    left: 7px;
+  }
+
+  .books-swiper-button-next {
+    left: 106px;
+  }
 }
+
+
+
 
 @media (max-width: 920px) {
   .catalogue-content {
@@ -2409,6 +2462,19 @@ h1 {
     height: auto;
   }
 
+  .books-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .books-filter {
+    width: 100%;
+  }
+
+  .categories-list {
+    flex-wrap: wrap;
+    height: 250px;
+  }
 
 }
 
