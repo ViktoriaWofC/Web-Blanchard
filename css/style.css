@@ -1157,6 +1157,10 @@ h1 {
   margin-top: 24px;
 }
 
+.events-content-hidden {
+  height: calc(2.58vw + 700px);
+}
+
 .pagination-hidden {
   display: none;
 }
@@ -1177,19 +1181,12 @@ h1 {
   overflow: hidden;
 }
 
-.events-list-hidden {
-  flex-wrap: nowrap;
-}
-
 .event-card {
   display: flex;
   flex-direction: column;
   margin: 0 0 2.58vw 2.58vw;
-  width: 26.05vw !important;
-  /* min-width: 283px; */
-  height: auto;
-  /* height: 36.46vw;
-  min-height: 683px; */
+  width: 26.05vw;
+  height: 700px;
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
@@ -1222,7 +1219,8 @@ h1 {
   width: 100%;
   height: 100%;
   min-height: 400px;
-  padding: 50px 46px 42px 50px;
+  /* padding: 50px 46px 42px 50px; */
+  padding: 50px 2.39vw 2.19vw 2.6vw;
   border-left: 1px solid #CACACA;
   border-bottom: 1px solid #CACACA;
   border-right: 1px solid #CACACA;
@@ -2148,16 +2146,6 @@ h1 {
 
 /*MEDIA*/
 
-@media (min-width: 1921px) {
-
-  .container {
-    padding-left: 8.3vw;
-    padding-right: 8.3vw;
-  }
-
-
-}
-
 @media (max-width: 1600px) {
   .periods-content-list-1400 {
     height: 384px;
@@ -2333,9 +2321,47 @@ h1 {
     width: fit-content;
   }
 
-  .event-card-content {
-    margin-top: 195px;
+  .events-container {
+    padding-left: 50px;
   }
+
+  .section-heading-events {
+    margin-left: -3px;
+  }
+
+  .events-content-hidden {
+    height: 683px;
+  }
+
+  .events-list {
+    margin: 0 0 0 -2.65vw;
+    width: calc(100% + 2.65vw);
+  }
+
+  .event-card {
+    margin: 0 0 2.6vw 2.65vw;
+    width: 290px;
+    height: 683px;
+  }
+
+  .event-card-content {
+    margin-top: 201px;
+    padding: 50px 25px 51px 35px;
+  }
+
+  .card-content-description {
+    margin-right: 5px;
+  }
+
+  .event-card-img-description {
+    right: -1px;
+    top: 1px;
+  }
+
+  .events-button {
+    margin-top: 50px;
+  }
+
 
   .event-card-img-1 {
     background-image: url('/img/events/Event-1-290.png');
@@ -2354,7 +2380,7 @@ h1 {
   }
 
   .event-card-img-5 {
-    background-image: url('/img/events/Event-2.png');
+    background-image: url('/img/events/Event-2-290.png');
   }
 
 }
@@ -2400,7 +2426,6 @@ h1 {
   .catalogue-content {
     flex-wrap: wrap-reverse;
   }
-
 }
 
 @media (max-width: 320px) {
@@ -2412,6 +2437,12 @@ h1 {
 
   .header-container {
     height: 45px;
+  }
+
+  .event-card {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
   }
 
 }

@@ -113,15 +113,14 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
   document.querySelector(".events-button-content").addEventListener("click", function(event) {
-    document.querySelector(".events-list").classList.remove("events-list-hidden");
+    document.querySelector(".events-content").classList.remove("events-content-hidden");
     event.target.style.display  = 'none';
   });
 
   document.querySelector(".events-button-content").addEventListener("keypress", function(event) {
     if(event.keyCode == 13)
     {
-      console.log(document.querySelector(".events-list"))
-      document.querySelector(".events-list").classList.remove("events-list-hidden");
+      document.querySelector(".events-content").classList.remove("events-content-hidden");
       event.target.style.display  = 'none';
     }
   });
@@ -404,7 +403,7 @@ function CreateSwiperEvents() {
   });
 }
 
-const breakpointSwiperEvents = window.matchMedia( '(max-width:760px)' );
+const breakpointSwiperEvents = window.matchMedia( '(max-width:320px)' );
 
 function CheckSwiperEvents(isOn) {
   if(isOn === true) {
