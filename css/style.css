@@ -2443,11 +2443,12 @@ h1 {
   }
 
   .contacts-details {
-    width: 47.56vw;
-    min-width: 400px;
+    /* width: 47.56vw; */
+    width: 487px;
+    min-width: 487px;
     padding-top: 122px;
     padding-bottom: 102px;
-    padding-left: 4.88vw;
+    padding-left: 50px;
     padding-right: 30px;
   }
 
@@ -2461,7 +2462,7 @@ h1 {
   }
 
   .contacts-map {
-    width: auto;
+    /* width: auto; */
   }
 
 }
