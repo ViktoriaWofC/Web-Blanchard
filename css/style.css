@@ -2461,8 +2461,13 @@ h1 {
     margin-right: 30px;
   }
 
-  .contacts-map {
-    /* width: auto; */
+  .footer-icon {
+    width: 63px;
+    height: 63px;
+  }
+
+  .footer-icon:not(:last-child) {
+    margin-right: 27px;
   }
 
 }
