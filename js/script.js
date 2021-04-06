@@ -3,9 +3,10 @@ window.addEventListener('DOMContentLoaded', function() {
   var swiperGallery = new Swiper('.gallery-swiper-container', {
     slidesPerView: 1,
     slidesPerGroup: 1,
+    slidesPerColumn: 1,
     //slidesPerColumn: 2,
     //slidesPerColumnFill: 'row',
-    spaceBetween: 50,
+    //spaceBetween: 50,
     watchOverflow: true,
     pagination: {
       el: '.gallery-swiper-pagination',
@@ -16,18 +17,36 @@ window.addEventListener('DOMContentLoaded', function() {
       prevEl: '.gallery-swiper-button-prev',
     },
     breakpoints: {
-      // when window width is >= 1600px
-      1601: {
-        slidesPerView: 3,
+      320: {
+        slidesPerView: 1,
+        slidesPerColumn: 1,
+        slidesPerGroup: 1,
+        //spaceBetween: 30
+      },
+      500: {
+        slidesPerView: 1,
+        slidesPerColumn: 1,
+        slidesPerGroup: 1
+      },
+      701: {
+        slidesPerView: 2,
         slidesPerColumn: 2,
-        slidesPerGroup: 3
+        slidesPerGroup: 2,
+        spaceBetween: 30
       },
       768: {
         slidesPerView: 2,
         slidesPerColumn: 2,
         slidesPerGroup: 2,
         spaceBetween: 35
+      },
+      // when window width is >= 1600px
+      1601: {
+        slidesPerView: 3,
+        slidesPerColumn: 2,
+        slidesPerGroup: 3
       }
+
     }
   });
 
