@@ -2433,6 +2433,18 @@ h1 {
   .books-swiper-button-next {
     left: 106px;
   }
+
+  .projects-partners-swiper {
+    /* padding-left: 56px;
+    padding-right: 56px; */
+    padding-left: 5.47vw;
+    padding-right: 5.47vw;
+  }
+
+  .partners-img {
+    height: 12.5vw !important;
+    background-size: auto 100%;
+  }
 }
 
 

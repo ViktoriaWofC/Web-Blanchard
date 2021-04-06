@@ -171,10 +171,20 @@ window.addEventListener('DOMContentLoaded', function() {
         slidesPerView: 2,
         slidesPerGroup: 2,
       },
-
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 15,
+      },
+      1000: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 49,
+      },
       1600: {
         slidesPerView: 3,
         slidesPerGroup: 3,
+        spaceBetween: 50
       }
     }
   });
