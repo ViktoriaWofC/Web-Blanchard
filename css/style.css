@@ -2649,6 +2649,58 @@ h1 {
     width: 30.09vw;
     min-width: 175px;
   }
+
+  .catalogue-card-description-details {
+    padding-left: 0px;
+  }
+
+  .events-container {
+    padding-top: 9px;
+  }
+
+  .events-list {
+    margin: 0 0 0 -4.43vw;
+    width: calc(100% + 4.43vw);
+  }
+
+  .event-card {
+    margin: 0 0 4.43vw 4.43vw;
+    /* width: 317px; */
+    width: 41.28vw;
+    min-width: 290px;
+  }
+
+  .event-card-content {
+    margin-top: 0px;
+    /* margin-top: 201px; */
+    /* padding: 50px 25px 51px 35px; */
+    /* margin-top: 26.17vw; */
+    padding: 250px 25px 51px 35px;
+  }
+
+  .event-card-img-description {
+    top: 199px;
+  }
+
+  .event-card-img-1 {
+    background-image: url('/img/events/Event-1-317.png');
+  }
+
+  .event-card-img-2 {
+    background-image: url('/img/events/Event-2-317.png');
+  }
+
+  .event-card-img-3 {
+    background-image: url('/img/events/Event-3-317.png');
+  }
+
+  .event-card-img-4 {
+    background-image: url('/img/events/Event-4-317.png');
+  }
+
+  .event-card-img-5 {
+    background-image: url('/img/events/Event-2-317.png');
+  }
 }
 
 @media (max-width: 670px) {
