@@ -879,15 +879,14 @@ h1 {
   display: flex;
 }
 
-.catalogue-top-country {
-  position: relative;
-  margin-left: 32px;
+.section-heading-catalogue {
+  margin: 0px;
 }
 
 .country-list {
-  position: absolute;
-  top: -7px;
   display: flex;
+  margin-left: 34px;
+  transform: translateY(-6px);
 }
 
 .country-list-item:not(:last-child) {
@@ -956,7 +955,7 @@ h1 {
 }
 
 .catalogue-description {
-  margin-top: 23px;
+  margin-top: 7px;
   max-width: 1080px;
   padding-left: 4px;
   font-size: 16px;
@@ -2297,11 +2296,12 @@ h1 {
   }
 
   .country-list {
-    transform: translateY(8px);
+    margin-left: 0px;
+    transform: translate(33px, 0px);
   }
 
   .catalogue-description {
-    margin-top: 24px;
+    margin-top: 6px;
     padding-left: 1px;
   }
 
@@ -2604,6 +2604,36 @@ h1 {
     width: 41.28vw !important;
     /* width: 317px !important; */
     min-width: 290px;
+  }
+
+  .catalogue-top {
+    flex-wrap: wrap;
+  }
+
+  .section-heading-catalogue {
+    margin-right: 20px;
+  }
+
+  .country-list {
+    transform: translate(1.3vw, -6px);
+  }
+
+  .country-list-item:not(:last-child) {
+    margin-right: 4.34vw;
+  }
+
+  .country-list-item-link {
+    width: 8.59vw;
+    min-width: 46px;
+    height: 8.59vw;
+    min-height: 46px;
+  }
+
+  .country-icon {
+    width: 6.12vw;
+    min-width: 32px;
+    height: 6.12vw;
+    min-height: 32px;
   }
 
   .catalogue-content {
