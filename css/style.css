@@ -2638,6 +2638,24 @@ h1 {
 
   .catalogue-content {
     flex-wrap: wrap-reverse;
+    margin-top: 22px;
+  }
+
+  .periods-content-list-1400 {
+    height: 288px;
+  }
+
+  .periods-content-list > li {
+    width: 30.09vw;
+    min-width: 175px;
+  }
+}
+
+@media (max-width: 670px) {
+
+  .periods-content-list-1400 {
+    flex-wrap: nowrap;
+    height: 100%;
   }
 }
 
