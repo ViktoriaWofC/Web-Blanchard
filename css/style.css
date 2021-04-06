@@ -2238,6 +2238,18 @@ h1 {
     background-size: 1024px 100%;
   }
 
+  @keyframes hero {
+    from {
+      background-position: 0px 0px;
+      background-size: 1024px 100%;
+    }
+
+    to {
+      background-position: -20px -20px;
+      background-size: 1064px calc(100% + 40px);
+    }
+  }
+
   .section-hero-content {
     padding-left: 45px;
   }
@@ -2480,6 +2492,14 @@ h1 {
     flex-wrap: wrap-reverse;
   }
 
+  .gallery-container {
+    flex-wrap: wrap;
+  }
+
+  .gallery-filter {
+    height: fit-content;
+  }
+
   .catalogue-content-nav {
     max-width: 100%;
   }
@@ -2524,6 +2544,29 @@ h1 {
 
   .header-container {
     height: 13vw;
+    padding-right: 5.9vw;
+  }
+
+  .section-hero {
+    height: 668px;
+    background-image: url('/img/hero-background-768.png');
+    background-size: 768px 100%;
+  }
+
+  @keyframes hero {
+    from {
+      background-position: 0px 0px;
+      background-size: 768px 100%;
+    }
+
+    to {
+      background-position: -20px -20px;
+      background-size: 808px calc(100% + 40px);
+    }
+  }
+
+  .section-hero-content {
+    padding-left: 6vw;
   }
 
   .catalogue-content {
