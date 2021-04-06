@@ -371,8 +371,9 @@ var swiperBooks;
 
 function CreateSwiperBooks() {
   swiperBooks = new Swiper('.books-swiper-container', {
-    slidesPerView: 1,
-    slidesPerGroup: 1,
+    slidesPerView: 2,
+    slidesPerGroup: 2,
+    spaceBetween: 9,
     watchOverflow: true,
     pagination: {
       el: '.books-swiper-pagination',
@@ -386,7 +387,7 @@ function CreateSwiperBooks() {
 
       // when window width is >= 1600px
 
-      768: {
+      769: {
         slidesPerView: 2,
         slidesPerGroup: 2,
         spaceBetween: 30
@@ -412,7 +413,7 @@ function CreateSwiperBooks() {
   });
 }
 
-const breakpointSwiperBooks = window.matchMedia( '(max-width:760px)' );
+const breakpointSwiperBooks = window.matchMedia( '(max-width:600px)' );
 
 function CheckSwiperBooks(isOff) {
   if(isOff === true) {

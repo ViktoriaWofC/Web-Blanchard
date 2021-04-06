@@ -1633,7 +1633,7 @@ h1 {
   height: 29px;
   background-color: #666666;
   border-radius: 50%;
-  transition-property: background-color border;
+  transition-property: background-color, border;
   transition-duration: .15s;
   transition-timing-function: ease-in-out;
 }
@@ -2556,7 +2556,12 @@ h1 {
 
   .categories-list {
     flex-wrap: wrap;
-    height: 250px;
+    align-content: space-between;
+    height: 140px;
+  }
+
+  .books-filter-price {
+    margin-top: 13px;
   }
 
 }
@@ -2665,16 +2670,12 @@ h1 {
 
   .event-card {
     margin: 0 0 4.43vw 4.43vw;
-    /* width: 317px; */
     width: 41.28vw;
     min-width: 290px;
   }
 
   .event-card-content {
     margin-top: 0px;
-    /* margin-top: 201px; */
-    /* padding: 50px 25px 51px 35px; */
-    /* margin-top: 26.17vw; */
     padding: 250px 25px 51px 35px;
   }
 
@@ -2700,6 +2701,46 @@ h1 {
 
   .event-card-img-5 {
     background-image: url('/img/events/Event-2-317.png');
+  }
+
+  .books-container {
+    padding-top: 82px;
+    padding-left: 46px;
+  }
+
+  .books-filter-categories {
+    margin-right: 4px;
+  }
+
+  .books-swiper {
+    width: 100%;
+    padding-left: 25px;
+  }
+
+  .books-swiper-container {
+    margin-top: 106px;
+    height: fit-content;
+    min-height: 442px;
+  }
+
+  .books-card-img {
+    width: 37.76vw;
+    min-width: 130px;
+  }
+
+  .books-swiper-pagination {
+    top: 47px;
+    left: 39px;
+  }
+
+  .books-swiper-button-prev {
+    top: 47px;
+    left: 6px;
+  }
+
+  .books-swiper-button-next {
+    top: 47px;
+    left: 106px;
   }
 }
 
