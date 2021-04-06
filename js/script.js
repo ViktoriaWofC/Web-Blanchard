@@ -2,12 +2,12 @@ window.addEventListener('DOMContentLoaded', function() {
 
   var swiperGallery = new Swiper('.gallery-swiper-container', {
     slidesPerView: 1,
-    slidesPerGroup: 1,
+    //slidesPerGroup: 1,
     slidesPerColumn: 1,
     //slidesPerColumn: 2,
     //slidesPerColumnFill: 'row',
     //spaceBetween: 50,
-    watchOverflow: true,
+    //watchOverflow: true,
     pagination: {
       el: '.gallery-swiper-pagination',
       type: 'fraction',
@@ -21,14 +21,21 @@ window.addEventListener('DOMContentLoaded', function() {
         slidesPerView: 1,
         slidesPerColumn: 1,
         slidesPerGroup: 1,
-        //spaceBetween: 30
+        spaceBetween: 1
       },
-      500: {
+      400: {
         slidesPerView: 1,
-        slidesPerColumn: 1,
-        slidesPerGroup: 1
+        slidesPerColumn: 2,
+        slidesPerGroup: 1,
+        spaceBetween: 30
       },
-      701: {
+      // 500: {
+      //   slidesPerView: 1,
+      //   slidesPerColumn: 2,
+      //   slidesPerGroup: 1,
+      //   spaceBetween: 30
+      // },
+      760: {
         slidesPerView: 2,
         slidesPerColumn: 2,
         slidesPerGroup: 2,
@@ -40,11 +47,12 @@ window.addEventListener('DOMContentLoaded', function() {
         slidesPerGroup: 2,
         spaceBetween: 35
       },
-      // when window width is >= 1600px
       1601: {
+        // when window width is >= 1600px
         slidesPerView: 3,
         slidesPerColumn: 2,
-        slidesPerGroup: 3
+        slidesPerGroup: 3,
+        spaceBetween: 50,
       }
 
     }

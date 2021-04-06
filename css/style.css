@@ -788,11 +788,11 @@ h1 {
 }
 
 .gallery-swiper-wrapper {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  overflow: hidden;
+  overflow: hidden; */
 }
 
 .gallery-swiper-slide{
