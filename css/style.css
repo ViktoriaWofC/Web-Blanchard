@@ -1848,7 +1848,7 @@ h1 {
   background-size: 100% auto;
   filter: grayscale(50);
   opacity: 0.4;
-  transition-property: filter opacity;
+  transition-property: filter, opacity;
   transition-duration: .15s;
   transition-timing-function: ease-in-out;
 }
@@ -2741,6 +2741,29 @@ h1 {
   .books-swiper-button-next {
     top: 47px;
     left: 106px;
+  }
+
+  .projects-container {
+    padding-left: 6.2vw;
+  }
+
+  .projects-description {
+    margin-right: 3px;
+  }
+
+  .projects-partners {
+    margin-top: 26px;
+  }
+
+  .projects-partners-swiper {
+    margin-top: 29px;
+    padding-right: 6.9vw;
+  }
+
+  .partners-img {
+    height: 13.8vw !important;
+    min-height: 65px;
+    background-position-x: center;
   }
 }
 

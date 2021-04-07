@@ -195,13 +195,13 @@ window.addEventListener('DOMContentLoaded', function() {
     breakpoints: {
       // when window width is >= 1600px
       320: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
       },
-      768: {
+      760: {
         slidesPerView: 2,
         slidesPerGroup: 2,
-        spaceBetween: 15,
+        spaceBetween: 33,
       },
       1000: {
         slidesPerView: 2,
