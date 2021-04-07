@@ -2765,6 +2765,15 @@ h1 {
     min-height: 65px;
     background-position-x: center;
   }
+
+  .contacts-container {
+    padding-left: 6.2vw;
+  }
+
+  .contacts-details {
+    width: 100%;
+    min-width: 432px;
+  }
 }
 
 @media (max-width: 670px) {
@@ -2772,6 +2781,16 @@ h1 {
   .periods-content-list-1400 {
     flex-wrap: nowrap;
     height: 100%;
+  }
+
+  .contacts {
+    flex-direction: column-reverse;
+    height: fit-content;
+  }
+
+  .contacts-map {
+    height: 320px;
+    width: 100%;
   }
 }
 
