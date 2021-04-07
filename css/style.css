@@ -1164,7 +1164,7 @@ h1 {
 }
 
 .swiper-container-events {
-  margin: 0px;
+  /* margin: 0px; */
   width: inherit;
   height: inherit;
 }
@@ -1176,7 +1176,6 @@ h1 {
   align-items: stretch;
   margin: 0 0 0 -2.58vw;
   width: calc(100% + 2.58vw);
-  overflow: hidden;
 }
 
 .event-card {
@@ -2964,6 +2963,7 @@ h1 {
   .catalogue-container {
     padding-top: 86px;
     padding-left: 12px;
+    padding-bottom: 47px;
   }
 
   .country-list {
@@ -3028,24 +3028,93 @@ h1 {
     margin-right: 1px;
   }
 
+  .events-container {
+    padding-bottom: 81px;
+  }
 
+  .events-content {
+    position: relative;
+    margin-top: 16px;
+  }
 
+  .events-content-hidden {
+    height: fit-content;
+  }
 
-
-
-
-
-
-
-
-
-
-
+  .events-list {
+    flex-wrap: nowrap;
+    margin: 0px;
+    width: 100%;
+  }
 
   .event-card {
     margin: 0px;
     width: 100%;
-    height: 100%;
+  }
+
+  .event-card-img-description {
+    padding-top: 17px;
+    padding-right: 11px;
+  }
+
+  .event-card-content {
+    margin-top: 0px;
+    padding: 251px 20px 49px 28px;
+  }
+
+  .card-content-description {
+    margin-top: 34px;
+  }
+
+
+
+  .event-card-img-1 {
+    background-image: url('/img/events/Event-1-290.png');
+  }
+
+  .event-card-img-2 {
+    background-image: url('/img/events/Event-2-290.png');
+  }
+
+  .event-card-img-3 {
+    background-image: url('/img/events/Event-3-290.png');
+  }
+
+  .event-card-img-4 {
+    background-image: url('/img/events/Event-4-290.png');
+  }
+
+  .event-card-img-5 {
+    background-image: url('/img/events/Event-2-290.png');
+  }
+
+  .events-swiper-pagination {
+    position: absolute;
+    bottom: -34px;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+  }
+
+  .events-swiper-pagination > .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+
+  .events-swiper-pagination > .swiper-pagination-bullet:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  .events-swiper-pagination > .swiper-pagination-bullet-active {
+    background-color: #666666;
+  }
+
+  .pagination-hidden {
+    display: block;
+  }
+
+  .events-button {
+    display: none;
   }
 
 }

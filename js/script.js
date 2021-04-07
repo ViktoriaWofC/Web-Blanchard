@@ -304,10 +304,6 @@ window.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-
-
-
-
 });
 
 var swiperGallerySingle;
@@ -485,9 +481,9 @@ function CreateSwiperEvents() {
   swiperEvents = new Swiper('.swiper-container-events', {
     slidesPerView: 1,
     watchOverflow: true,
-    noSwiping: false,
     pagination: {
-      el: '.swiper-pagination',
+      el: '.events-swiper-pagination',
+      type: 'bullets',
       clickable: true,
     }
   });
