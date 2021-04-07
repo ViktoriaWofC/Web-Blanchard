@@ -2578,6 +2578,17 @@ h1 {
     padding-right: 5.9vw;
   }
 
+  .header-menu-panel {
+    top: 13vw;
+  }
+
+  .header-logo {
+    width: 24.48vw;
+    min-width: 97px;
+    height: 5.47vw;
+    min-height: 22px;
+  }
+
   .section-hero {
     height: 668px;
     background-image: url('/img/hero-background-768.png');
@@ -2598,6 +2609,10 @@ h1 {
 
   .section-hero-content {
     padding-left: 6vw;
+  }
+
+  .section-hero-description {
+    width: 100%;
   }
 
   .gallery-swiper {
@@ -2803,6 +2818,28 @@ h1 {
 
   .header-container {
     height: 45px;
+    padding-right: 11px;
+  }
+
+  .header-menu-panel {
+    top: 45px;
+  }
+
+  .header-menu-icon > svg {
+    width: 20px;
+    height: 23px;
+  }
+
+  .header-logo {
+    width: 97px;
+    min-width: 97px;
+    height: 22px;
+    min-height: 22px;
+  }
+
+  .search-mobile > svg {
+    width: 17px;
+    height: 18px;
   }
 
   .event-card {
