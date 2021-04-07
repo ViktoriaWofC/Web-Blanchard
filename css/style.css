@@ -2611,6 +2611,12 @@ h1 {
     padding-left: 6vw;
   }
 
+  .section-hero-heading {
+    font-size: 9.38vw;
+    line-height: calc(9.38vw + 11px);
+    font-weight: bold;
+  }
+
   .section-hero-description {
     width: 100%;
   }
@@ -2841,6 +2847,42 @@ h1 {
     width: 17px;
     height: 18px;
   }
+
+  .section-hero {
+    height: 310px;
+    background-image: url('/img/hero-background-320.png');
+    background-size: 320px 100%;
+  }
+
+  @keyframes hero {
+    from {
+      background-position: 0px 0px;
+      background-size: 320px 100%;
+    }
+
+    to {
+      background-position: -10px -10px;
+      background-size: 340px calc(100% + 20px);
+    }
+  }
+
+  .section-hero-content {
+    text-align: center;
+  }
+
+  .section-hero-heading {
+    font-size: 32px;
+    line-height: 44px;
+    font-weight: bold;
+  }
+
+
+
+
+
+
+
+
 
   .event-card {
     margin: 0px;
