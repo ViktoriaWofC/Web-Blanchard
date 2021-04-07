@@ -1,63 +1,6 @@
 window.addEventListener('DOMContentLoaded', function() {
 
-  var swiperGallery = new Swiper('.gallery-swiper-container', {
-    slidesPerView: 1,
-    //slidesPerGroup: 1,
-    slidesPerColumn: 1,
-    //slidesPerColumn: 2,
-    //slidesPerColumnFill: 'row',
-    //spaceBetween: 50,
-    //watchOverflow: true,
-    pagination: {
-      el: '.gallery-swiper-pagination',
-      type: 'fraction',
-    },
-    navigation: {
-      nextEl: '.gallery-swiper-button-next',
-      prevEl: '.gallery-swiper-button-prev',
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        slidesPerColumn: 1,
-        slidesPerGroup: 1,
-        spaceBetween: 1
-      },
-      400: {
-        slidesPerView: 1,
-        slidesPerColumn: 2,
-        slidesPerGroup: 1,
-        spaceBetween: 30
-      },
-      // 500: {
-      //   slidesPerView: 1,
-      //   slidesPerColumn: 2,
-      //   slidesPerGroup: 1,
-      //   spaceBetween: 30
-      // },
-      760: {
-        slidesPerView: 2,
-        slidesPerColumn: 2,
-        slidesPerGroup: 2,
-        spaceBetween: 30
-      },
-      768: {
-        slidesPerView: 2,
-        slidesPerColumn: 2,
-        slidesPerGroup: 2,
-        spaceBetween: 35
-      },
-      1601: {
-        // when window width is >= 1600px
-        slidesPerView: 3,
-        slidesPerColumn: 2,
-        slidesPerGroup: 3,
-        spaceBetween: 50,
-      }
-
-    }
-  });
-
+  CheckSwiperGallery(breakpointSwiperGallery.matches);
 
   document.querySelector(".section-hero-button").addEventListener('click', function(event){
     var element = document.getElementById("contacts");
@@ -367,6 +310,110 @@ window.addEventListener('DOMContentLoaded', function() {
 
 });
 
+var swiperGallerySingle;
+var swiperGalleryMultiple;
+
+function CreateSwiperGallerySingle() {
+  swiperGallerySingle = new Swiper('.gallery-swiper-container', {
+    slidesPerView: 1,
+    //slidesPerGroup: 1,
+    //slidesPerColumn: 1,
+    //slidesPerColumnFill: 'row',
+    //spaceBetween: 50,
+    //watchOverflow: true,
+    pagination: {
+      el: '.gallery-swiper-pagination',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.gallery-swiper-button-next',
+      prevEl: '.gallery-swiper-button-prev',
+    },
+  });
+}
+
+function CreateSwiperGalleryMultiple() {
+  swiperGalleryMultiple = new Swiper('.gallery-swiper-container', {
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    slidesPerColumn: 1,
+    //slidesPerColumnFill: 'row',
+    //spaceBetween: 50,
+    //watchOverflow: true,
+    pagination: {
+      el: '.gallery-swiper-pagination',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.gallery-swiper-button-next',
+      prevEl: '.gallery-swiper-button-prev',
+    },
+    breakpoints: {
+      // 300: {
+      //   slidesPerView: 1,
+      //   slidesPerColumn: 1,
+      //   slidesPerGroup: 1,
+      //   //spaceBetween: 0
+      // },
+      300: {
+        slidesPerView: 1,
+        slidesPerColumn: 2,
+        slidesPerGroup: 1,
+        spaceBetween: 30
+      },
+      760: {
+        slidesPerView: 2,
+        slidesPerColumn: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 30
+      },
+      768: {
+        slidesPerView: 2,
+        slidesPerColumn: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 35
+      },
+      1601: {
+        // when window width is >= 1600px
+        slidesPerView: 3,
+        slidesPerColumn: 2,
+        slidesPerGroup: 3,
+        spaceBetween: 50,
+      }
+
+    }
+  });
+}
+
+const breakpointSwiperGallery = window.matchMedia( '(max-width:350px)' );
+
+function CheckSwiperGallery(isOn) {
+
+  if(isOn === true) {
+    if(swiperGalleryMultiple !== undefined && swiperGalleryMultiple.destroyed === undefined)
+    {
+      swiperGalleryMultiple.destroy(true, true);
+      console.log('Destroy SwiperGalleryMultiple');
+    }
+    if(swiperGallerySingle === undefined || swiperGallerySingle.destroyed === true)
+    {
+      CreateSwiperGallerySingle();
+      console.log('Create SwiperGallerySingle');
+    }
+  } else {
+    if(swiperGalleryMultiple === undefined || swiperGalleryMultiple.destroyed === true)
+    {
+      CreateSwiperGalleryMultiple();
+      console.log('Create SwiperGalleryMultiple');
+    }
+    if(swiperGallerySingle !== undefined && swiperGallerySingle.destroyed === undefined)
+    {
+      swiperGallerySingle.destroy(true, true);
+      console.log('Destroy SwiperGallerySingle');
+    }
+  }
+};
+
 var swiperBooks;
 
 function CreateSwiperBooks() {
@@ -467,4 +514,5 @@ function CheckSwiperEvents(isOn) {
 window.addEventListener('resize', function() {
     CheckSwiperBooks(breakpointSwiperBooks.matches);
     CheckSwiperEvents(breakpointSwiperEvents.matches);
+    CheckSwiperGallery(breakpointSwiperGallery.matches);
  });

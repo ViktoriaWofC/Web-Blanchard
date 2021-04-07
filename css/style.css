@@ -691,7 +691,6 @@ h1 {
 .choices {
   margin-left: 4px;
   margin-top: 9px;
-  margin-left: 4px;
 }
 
 .choices__inner {
@@ -787,14 +786,6 @@ h1 {
   height: 750px;
 }
 
-.gallery-swiper-wrapper {
-  /* display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  overflow: hidden; */
-}
-
 .gallery-swiper-slide{
   margin-right: 5px;
   width: 350px !important;
@@ -835,7 +826,7 @@ h1 {
   height: 29px;
   background-color: #666666;
   border-radius: 50%;
-  transition-property: background-color border;
+  transition-property: background-color, border;
   transition-duration: .15s;
   transition-timing-function: ease-in-out;
 }
@@ -2513,7 +2504,7 @@ h1 {
   }
 
   .gallery-filter-selector {
-    height: 197px;
+    height: 200px;
   }
 
   .gallery-filter-condition {
@@ -2898,6 +2889,84 @@ h1 {
     font-size: 12px;
     line-height: 16px;
   }
+
+  .section-heading {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .section-about-container {
+    padding-top: 55px;
+    padding-bottom: 41px;
+  }
+
+  .section-about-content {
+    margin-top: 17px;
+    margin-right: 0px;
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .gallery-container {
+    padding-top: 55px;
+    padding-left: 14px;
+  }
+
+  .gallery-filter {
+    width: 100%;
+  }
+
+  .gallery-filter-selector {
+    padding-top: 16px;
+  }
+
+  .choices {
+    margin-left: 0px;
+    margin-top: 5px;
+  }
+
+  .gallery-swiper-container {
+    margin-top: 12px;
+    height: 367px;
+  }
+
+  .gallery-swiper-slide {
+    margin-right: 0px;
+    width: 291px !important;
+    min-width: 291px;
+    height: 367px !important;
+  }
+
+  .gallery-swiper-pagination {
+    top: auto;
+    bottom: -59px;
+    left: calc(50% - 30px);
+  }
+
+  .gallery-swiper-btn {
+    top: auto;
+    bottom: -49px;
+  }
+
+  .gallery-swiper-button-prev {
+    left: calc(50% - 64px);
+  }
+
+  .gallery-swiper-button-next {
+    left: calc(50% + 36px);
+  }
+
+  .gallery-filter-condition-after {
+    margin-top: 69px;
+    padding-left: 2px;
+  }
+
+
+
+
+
+
+
 
 
 
