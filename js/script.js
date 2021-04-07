@@ -95,20 +95,6 @@ window.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-
-  document.querySelectorAll(".category-checkbox").forEach(function(el){
-    el.addEventListener("change", function(event) {
-      var checkbox = event.target;
-      var label = checkbox.parentElement;
-      if(checkbox.checked){
-        label.setAttribute("aria-checked", true);
-      }
-      else {
-        label.setAttribute("aria-checked", false);
-      }
-    });
-  });
-
   document.querySelectorAll(".price-content-input").forEach(function(el){
     el.addEventListener("blur", function(event) {
       event.currentTarget.value = event.currentTarget.value.replace(/[^\d]/g, '').replace(/\B(?=(?:\d{3})+(?!\d))/g, ' ');
@@ -230,6 +216,24 @@ window.addEventListener('DOMContentLoaded', function() {
   };
 
 
+
+
+  document.querySelector(".categories-heading").addEventListener("click", function(event) {
+    if(breakpointBooksSpoiler.matches) {
+      document.querySelector(".categories-list").classList.toggle("categories-list-hidden");
+      event.currentTarget.classList.toggle("categories-heading-active");
+    }
+  });
+
+  document.querySelector(".categories-heading").addEventListener("keypress", function(event) {
+    if(breakpointBooksSpoiler.matches && event.keyCode == 13)
+    {
+      document.querySelector(".categories-list").classList.toggle("categories-list-hidden");
+      event.currentTarget.classList.toggle("categories-heading-active");
+    }
+  });
+
+
   document.querySelector(".header-menu-icon").addEventListener("click", function(event) {
     document.querySelector(".header-menu-panel").classList.toggle("header-menu-panel-active");
   });
@@ -246,6 +250,19 @@ window.addEventListener('DOMContentLoaded', function() {
       document.querySelector(".header-menu-panel").classList.toggle("header-menu-panel-active");
     })
   });
+
+  // document.querySelectorAll(".category-checkbox").forEach(function(el){
+  //   el.addEventListener("change", function(event) {
+  //     var checkbox = event.target;
+  //     var label = checkbox.parentElement;
+  //     if(checkbox.checked){
+  //       label.setAttribute("aria-checked", true);
+  //     }
+  //     else {
+  //       label.setAttribute("aria-checked", false);
+  //     }
+  //   });
+  // });
 
   document.querySelectorAll(".category-checkbox").forEach(function(elem) {
     elem.addEventListener("change", function(event) {
@@ -266,7 +283,8 @@ window.addEventListener('DOMContentLoaded', function() {
       {
         var checkbox = event.currentTarget.querySelector("input");
         var label = event.currentTarget;
-        if(label.getAttribute("aria-checked")){
+        var state = label.getAttribute("aria-checked");
+        if(label.getAttribute("aria-checked") === "true"){
           checkbox.checked = false;
           label.setAttribute("aria-checked", false);
         }
@@ -490,6 +508,8 @@ function CreateSwiperEvents() {
 }
 
 const breakpointSwiperEvents = window.matchMedia( '(max-width:320px)' );
+
+const breakpointBooksSpoiler = window.matchMedia( '(max-width:670px)' );
 
 function CheckSwiperEvents(isOn) {
   if(isOn === true) {

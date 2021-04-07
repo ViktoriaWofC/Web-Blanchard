@@ -2803,6 +2803,68 @@ h1 {
     height: 320px;
     width: 100%;
   }
+
+  .books-filter-categories {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .books-filter-categories {
+    margin-left: 2px;
+    margin-right: 0px;
+  }
+
+  .categories-heading {
+    position: relative;
+    margin-top: 17px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+  }
+
+  .categories-heading:after {
+    content: '';
+    position: absolute;
+    right: 1px;
+    top: 17px;
+    height: 8px;
+    width: 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white white transparent transparent;
+    box-sizing: border-box;
+    transform: rotate(315deg);
+    pointer-events: none;
+    transition-property: top, transform;
+    transition-duration: .15s;
+    transition-timing-function: ease-in-out;
+  }
+
+  .categories-heading-active:after{
+    top: 13px;
+    transform: rotate(135deg);
+  }
+
+  .categories-list {
+    flex-wrap: nowrap;
+    height: 390px;
+    overflow: hidden;
+    transition: height .25s ease-in-out;
+  }
+
+  .categories-list-hidden {
+    visibility: hidden;
+    height: 0px;
+  }
+
+  .categories-list-item {
+    padding-top: 2px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid;
+  }
+
+
 }
 
 @media (max-width: 320px) {
@@ -3066,8 +3128,6 @@ h1 {
     margin-top: 34px;
   }
 
-
-
   .event-card-img-1 {
     background-image: url('/img/events/Event-1-290.png');
   }
@@ -3116,5 +3176,27 @@ h1 {
   .events-button {
     display: none;
   }
+
+  .books-container {
+    padding-top: 47px;
+    padding-left: 9px;
+  }
+
+  .section-books-heading {
+    padding-left: 3px;
+  }
+
+  .categories-heading {
+    margin-left: 3px;
+  }
+
+  .categories-list-item {
+    margin-left: 3px;
+  }
+
+
+
+
+
 
 }
