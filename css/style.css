@@ -2867,16 +2867,37 @@ h1 {
   }
 
   .section-hero-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 33px;
     text-align: center;
   }
 
   .section-hero-heading {
     font-size: 32px;
-    line-height: 44px;
+    line-height: 37px;
     font-weight: bold;
   }
 
+  .section-hero-description {
+    margin-left: 0px;
+    padding-left: 9px;
+    padding-right: 6px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: normal;
+  }
 
+  .section-hero-button {
+    margin-top: 35px;
+    align-self: center;
+  }
+
+  .section-hero-button-text {
+    padding: 10px 14px 11px 17px;
+    font-size: 12px;
+    line-height: 16px;
+  }
 
 
 
