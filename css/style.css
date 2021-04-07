@@ -2961,6 +2961,74 @@ h1 {
     padding-left: 2px;
   }
 
+  .catalogue-container {
+    padding-top: 86px;
+    padding-left: 12px;
+  }
+
+  .country-list {
+    margin-top: 9px;
+    transform: translate(-4px, 0);
+  }
+
+  .country-list-item:not(:last-child) {
+    margin-right: 18px;
+  }
+
+  .catalogue-description {
+    display: none;
+  }
+
+  .catalogue-content {
+    margin-top: 14px;
+  }
+
+  .periods-link {
+    padding: 19px 0px 20px 2px;
+  }
+
+  .periods-text {
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 500;
+  }
+
+  .periods-img {
+    transform: translateY(1px);
+  }
+
+  .periods-img-svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .periods-content {
+    padding-top: 17px;
+    padding-bottom: 20px;
+  }
+
+  .periods-content-list > li {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .catalogue-content-info {
+    margin-left: 2px;
+  }
+
+  .catalogue-card-description {
+    margin-top: 18px;
+  }
+
+  .catalogue-card-description-dates {
+    margin-top: 13px;
+  }
+
+  .catalogue-card-description-details {
+    margin-right: 1px;
+  }
+
+
 
 
 
