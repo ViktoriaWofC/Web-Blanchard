@@ -1250,6 +1250,7 @@ h1 {
 
 .card-content-link {
   margin-top: auto;
+  width: -moz-fit-content;
   width: fit-content;
   font-size: 16px;
   line-height: 24px;

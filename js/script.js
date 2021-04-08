@@ -2,6 +2,12 @@ window.addEventListener('DOMContentLoaded', function() {
 
   CheckSwiperGallery(breakpointSwiperGallery.matches);
 
+  CheckSwiperEvents(breakpointSwiperEvents.matches);
+
+  CheckSwiperBooks(breakpointSwiperBooks.matches);
+
+  // Section Hero
+
   document.querySelector(".section-hero-button").addEventListener('click', function(event){
     var element = document.getElementById("contacts");
     element.scrollIntoView({behavior: "smooth"});
@@ -14,7 +20,49 @@ window.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  // Second menu
 
+  document.querySelectorAll(".styles-item-link").forEach(function(elem) {
+    elem.addEventListener("click", function(event){
+      ChangeScrollbarStateAction(event);
+    })
+    elem.addEventListener("keypress", function(event){
+      if(event.keyCode == 13) {
+        ChangeScrollbarStateAction(event);
+      }
+    })
+    elem.addEventListener("blur", function(event){
+      event.currentTarget.classList.remove("styles-item-link-selected");
+      document.querySelectorAll(".styles-item-content").forEach(function(el){
+        el.classList.remove("styles-item-content-active");
+      });
+    })
+  });
+
+  function ChangeScrollbarStateAction(event) {
+    const path = event.currentTarget.dataset.path;
+
+    if(event.currentTarget.classList.contains('styles-item-link-selected')) {
+      event.currentTarget.classList.remove("styles-item-link-selected");
+      document.querySelector(`.styles-item-content[data-target="${path}"]`).classList.remove("styles-item-content-active");
+    }
+    else {
+      //add tab style
+      document.querySelectorAll(".styles-item-link").forEach(function(el){
+        el.classList.remove("styles-item-link-selected");
+      });
+      event.currentTarget.classList.add("styles-item-link-selected");
+
+      //add visible
+      document.querySelectorAll(".styles-item-content").forEach(function(el){
+        el.classList.remove("styles-item-content-active");
+      });
+      document.querySelector(`.styles-item-content[data-target="${path}"]`).classList.add("styles-item-content-active");
+    }
+  };
+
+
+  // Section Catalogue
 
   document.querySelectorAll(".country-list-item-link").forEach(function(elem) {
     elem.addEventListener("click", function(event){
@@ -69,6 +117,8 @@ window.addEventListener('DOMContentLoaded', function() {
       }
   };
 
+  // Accordion for periods
+
   $( function() {
     $( "#accordion" ).accordion({
       collapsible: true
@@ -83,9 +133,10 @@ window.addEventListener('DOMContentLoaded', function() {
     });
   } );
 
-
   document.querySelector(".periods-link").click();
 
+
+  // Section events
 
   document.querySelector(".events-button-content").addEventListener("click", function(event) {
     document.querySelector(".events-content").classList.remove("events-content-hidden");
@@ -100,6 +151,9 @@ window.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+
+  // Formats for prices
+
   document.querySelectorAll(".price-content-input").forEach(function(el){
     el.addEventListener("blur", function(event) {
       event.currentTarget.value = event.currentTarget.value.replace(/[^\d]/g, '').replace(/\B(?=(?:\d{3})+(?!\d))/g, ' ');
@@ -110,12 +164,8 @@ window.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  CheckSwiperEvents(breakpointSwiperEvents.matches);
 
-
-  CheckSwiperBooks(breakpointSwiperBooks.matches);
-
-
+  // Section Projects
 
   var swiperPertners = new Swiper('.swiper-container-partners', {
     slidesPerView: 1,
@@ -150,6 +200,7 @@ window.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  // Section Contacts
 
   // Функция ymaps.ready() будет вызвана, когда
   // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
@@ -179,49 +230,7 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 
 
-
-
-  document.querySelectorAll(".styles-item-link").forEach(function(elem) {
-    elem.addEventListener("click", function(event){
-      ChangeScrollbarStateAction(event);
-    })
-    elem.addEventListener("keypress", function(event){
-      if(event.keyCode == 13) {
-        ChangeScrollbarStateAction(event);
-      }
-    })
-    elem.addEventListener("blur", function(event){
-      event.currentTarget.classList.remove("styles-item-link-selected");
-      document.querySelectorAll(".styles-item-content").forEach(function(el){
-        el.classList.remove("styles-item-content-active");
-      });
-    })
-  });
-
-  function ChangeScrollbarStateAction(event) {
-    const path = event.currentTarget.dataset.path;
-
-    if(event.currentTarget.classList.contains('styles-item-link-selected')) {
-      event.currentTarget.classList.remove("styles-item-link-selected");
-      document.querySelector(`.styles-item-content[data-target="${path}"]`).classList.remove("styles-item-content-active");
-    }
-    else {
-      //add tab style
-      document.querySelectorAll(".styles-item-link").forEach(function(el){
-        el.classList.remove("styles-item-link-selected");
-      });
-      event.currentTarget.classList.add("styles-item-link-selected");
-
-      //add visible
-      document.querySelectorAll(".styles-item-content").forEach(function(el){
-        el.classList.remove("styles-item-content-active");
-      });
-      document.querySelector(`.styles-item-content[data-target="${path}"]`).classList.add("styles-item-content-active");
-    }
-  };
-
-
-
+  // Section Books
 
   document.querySelector(".categories-heading").addEventListener("click", function(event) {
     if(breakpointBooksSpoiler.matches) {
@@ -236,24 +245,6 @@ window.addEventListener('DOMContentLoaded', function() {
       document.querySelector(".categories-list").classList.toggle("categories-list-hidden");
       event.currentTarget.classList.toggle("categories-heading-active");
     }
-  });
-
-
-  document.querySelector(".header-menu-icon").addEventListener("click", function(event) {
-    document.querySelector(".header-menu-panel").classList.toggle("header-menu-panel-active");
-  });
-
-  document.querySelector(".header-menu-icon").addEventListener("keypress", function(event) {
-    if(event.keyCode == 13)
-    {
-      document.querySelector(".header-menu-panel").classList.toggle("header-menu-panel-active");
-    }
-  });
-
-  document.querySelectorAll(".menu-panel-list-item-link").forEach(function(elem) {
-    elem.addEventListener("click", function(event) {
-      document.querySelector(".header-menu-panel").classList.toggle("header-menu-panel-active");
-    })
   });
 
   document.querySelectorAll(".category-checkbox").forEach(function(elem) {
@@ -289,6 +280,28 @@ window.addEventListener('DOMContentLoaded', function() {
   });
 
 
+  // Burger Menu
+
+  document.querySelector(".header-menu-icon").addEventListener("click", function(event) {
+    document.querySelector(".header-menu-panel").classList.toggle("header-menu-panel-active");
+  });
+
+  document.querySelector(".header-menu-icon").addEventListener("keypress", function(event) {
+    if(event.keyCode == 13)
+    {
+      document.querySelector(".header-menu-panel").classList.toggle("header-menu-panel-active");
+    }
+  });
+
+  document.querySelectorAll(".menu-panel-list-item-link").forEach(function(elem) {
+    elem.addEventListener("click", function(event) {
+      document.querySelector(".header-menu-panel").classList.toggle("header-menu-panel-active");
+    })
+  });
+
+
+  // Validation and mask for Form
+
   var selector = document.querySelector("input[type='tel']");
   var im = new Inputmask("+7 (999) 999-99-99");
   im.mask(selector);
@@ -316,80 +329,10 @@ window.addEventListener('DOMContentLoaded', function() {
 
 });
 
+// Swiper for Gallery
+
 var swiperGallerySingle;
 var swiperGalleryMultiple;
-
-function CreateSwiperGallerySingle() {
-  swiperGallerySingle = new Swiper('.gallery-swiper-container', {
-    slidesPerView: 1,
-    //slidesPerGroup: 1,
-    //slidesPerColumn: 1,
-    //slidesPerColumnFill: 'row',
-    //spaceBetween: 50,
-    //watchOverflow: true,
-    pagination: {
-      el: '.gallery-swiper-pagination',
-      type: 'fraction',
-    },
-    navigation: {
-      nextEl: '.gallery-swiper-button-next',
-      prevEl: '.gallery-swiper-button-prev',
-    },
-  });
-}
-
-function CreateSwiperGalleryMultiple() {
-  swiperGalleryMultiple = new Swiper('.gallery-swiper-container', {
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    slidesPerColumn: 1,
-    //slidesPerColumnFill: 'row',
-    //spaceBetween: 50,
-    //watchOverflow: true,
-    pagination: {
-      el: '.gallery-swiper-pagination',
-      type: 'fraction',
-    },
-    navigation: {
-      nextEl: '.gallery-swiper-button-next',
-      prevEl: '.gallery-swiper-button-prev',
-    },
-    breakpoints: {
-      // 300: {
-      //   slidesPerView: 1,
-      //   slidesPerColumn: 1,
-      //   slidesPerGroup: 1,
-      //   //spaceBetween: 0
-      // },
-      300: {
-        slidesPerView: 1,
-        slidesPerColumn: 2,
-        slidesPerGroup: 1,
-        spaceBetween: 30
-      },
-      760: {
-        slidesPerView: 2,
-        slidesPerColumn: 2,
-        slidesPerGroup: 2,
-        spaceBetween: 30
-      },
-      768: {
-        slidesPerView: 2,
-        slidesPerColumn: 2,
-        slidesPerGroup: 2,
-        spaceBetween: 35
-      },
-      1601: {
-        // when window width is >= 1600px
-        slidesPerView: 3,
-        slidesPerColumn: 2,
-        slidesPerGroup: 3,
-        spaceBetween: 50,
-      }
-
-    }
-  });
-}
 
 const breakpointSwiperGallery = window.matchMedia( '(max-width:350px)' );
 
@@ -420,7 +363,85 @@ function CheckSwiperGallery(isOn) {
   }
 };
 
+function CreateSwiperGallerySingle() {
+  swiperGallerySingle = new Swiper('.gallery-swiper-container', {
+    slidesPerView: 1,
+    pagination: {
+      el: '.gallery-swiper-pagination',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.gallery-swiper-button-next',
+      prevEl: '.gallery-swiper-button-prev',
+    },
+  });
+}
+
+function CreateSwiperGalleryMultiple() {
+  swiperGalleryMultiple = new Swiper('.gallery-swiper-container', {
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    slidesPerColumn: 1,
+    pagination: {
+      el: '.gallery-swiper-pagination',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.gallery-swiper-button-next',
+      prevEl: '.gallery-swiper-button-prev',
+    },
+    breakpoints: {
+      300: {
+        slidesPerView: 1,
+        slidesPerColumn: 2,
+        slidesPerGroup: 1,
+        spaceBetween: 30
+      },
+      760: {
+        slidesPerView: 2,
+        slidesPerColumn: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 30
+      },
+      768: {
+        slidesPerView: 2,
+        slidesPerColumn: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 35
+      },
+      1601: {
+        slidesPerView: 3,
+        slidesPerColumn: 2,
+        slidesPerGroup: 3,
+        spaceBetween: 50,
+      }
+
+    }
+  });
+}
+
+
+// Swiper for Books
+
 var swiperBooks;
+
+const breakpointSwiperBooks = window.matchMedia( '(max-width:670px)' );
+
+function CheckSwiperBooks(isOff) {
+  if(isOff === true) {
+    if(swiperBooks !== undefined && swiperBooks.destroyed === undefined)
+    {
+      swiperBooks.destroy(true, true);
+      console.log('Destroy SwiperBooks');
+    }
+  } else {
+    if(swiperBooks === undefined || swiperBooks.destroyed === true)
+    {
+      CreateSwiperBooks();
+      console.log('Create SwiperBooks');
+    }
+  }
+};
 
 function CreateSwiperBooks() {
   swiperBooks = new Swiper('.books-swiper-container', {
@@ -466,24 +487,7 @@ function CreateSwiperBooks() {
   });
 }
 
-const breakpointSwiperBooks = window.matchMedia( '(max-width:670px)' );
-
-function CheckSwiperBooks(isOff) {
-  if(isOff === true) {
-    if(swiperBooks !== undefined && swiperBooks.destroyed === undefined)
-    {
-      swiperBooks.destroy(true, true);
-      console.log('Destroy SwiperBooks');
-    }
-  } else {
-    if(swiperBooks === undefined || swiperBooks.destroyed === true)
-    {
-      CreateSwiperBooks();
-      console.log('Create SwiperBooks');
-    }
-  }
-};
-
+// Swiper for Events
 
 var swiperEvents;
 
@@ -498,6 +502,8 @@ function CreateSwiperEvents() {
     }
   });
 }
+
+// Additional breakpoints
 
 const breakpointSwiperEvents = window.matchMedia( '(max-width:320px)' );
 
