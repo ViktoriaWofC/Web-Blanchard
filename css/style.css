@@ -2806,6 +2806,7 @@ h1 {
 
   .books-container {
     padding-left: 30px;
+    padding-bottom: 1px;
   }
 
   .books-filter-categories {
