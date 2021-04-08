@@ -1784,7 +1784,7 @@ h1 {
   height: 29px;
   background-color: #ECECEC;
   border-radius: 50%;
-  transition-property: background-color border;
+  transition-property: background-color, border;
   transition-duration: .15s;
   transition-timing-function: ease-in-out;
 }
@@ -2762,6 +2762,10 @@ h1 {
     margin-right: 3px;
   }
 
+  .tooltip-popup {
+    max-width: 105px;
+  }
+
   .projects-partners {
     margin-top: 26px;
   }
@@ -2812,11 +2816,8 @@ h1 {
   .books-filter-categories {
     display: flex;
     flex-direction: column;
-  }
-
-  .books-filter-categories {
     margin-left: 2px;
-    margin-right: 0px;
+    margin-right: 6px;
   }
 
   .categories-heading {
@@ -3273,6 +3274,37 @@ h1 {
   .books-filter-price {
     margin-top: 57px;
     margin-left: 5px;
+  }
+
+
+  .projects-container {
+    padding-top: 55px;
+    padding-left: 12px;
+    padding-right: 10px;
+  }
+
+  .projects-description {
+    margin-top: 17px;
+    margin-left: 2px;
+    margin-right: 0px;
+  }
+
+  .projects-partners {
+    margin-top: 10px;
+  }
+
+  .projects-partners-heading {
+    font-size: 17.5px;
+    line-height: 32px;
+    font-weight: 600;
+  }
+
+  .projects-partners-swiper {
+    margin-top: 10px;
+  }
+
+  .swiper-button-next-projects {
+    right: 8px;
   }
 
 
