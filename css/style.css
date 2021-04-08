@@ -2956,6 +2956,20 @@ h1 {
     padding: 9px 34px 10px 34px;
   }
 
+  .footer {
+    height: fit-content;
+  }
+
+  .footer-container {
+    flex-direction: column-reverse;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .footer-logo {
+    margin-top: 20px;
+  }
+
 
 }
 
@@ -3352,6 +3366,7 @@ h1 {
 
   .contacts-details {
     padding-top: 0px;
+    padding-bottom: 30px;
   }
 
   .contacts-details-address {
@@ -3399,6 +3414,24 @@ h1 {
 
   .details-social-icon:not(:last-child) {
     margin-right: 22px;
+  }
+
+  .footer-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .footer-icon:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .footer-logo {
+    padding-right: 4px;
+  }
+
+  .footer-logo > img {
+    width: 96px;
+    height: 21px;
   }
 
 
