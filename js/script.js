@@ -62,6 +62,11 @@ window.addEventListener('DOMContentLoaded', function() {
         el.classList.remove("catalogue-card-active");
       });
       document.querySelector(`[data-target="${path}"]`).classList.add("catalogue-card-active");
+
+      if(breakpointScrollToArticle.matches) {
+        var element = document.querySelector(`[data-target="${path}"]`);
+        element.scrollIntoView({behavior: "smooth"});
+      }
   };
 
   $( function() {
@@ -250,19 +255,6 @@ window.addEventListener('DOMContentLoaded', function() {
       document.querySelector(".header-menu-panel").classList.toggle("header-menu-panel-active");
     })
   });
-
-  // document.querySelectorAll(".category-checkbox").forEach(function(el){
-  //   el.addEventListener("change", function(event) {
-  //     var checkbox = event.target;
-  //     var label = checkbox.parentElement;
-  //     if(checkbox.checked){
-  //       label.setAttribute("aria-checked", true);
-  //     }
-  //     else {
-  //       label.setAttribute("aria-checked", false);
-  //     }
-  //   });
-  // });
 
   document.querySelectorAll(".category-checkbox").forEach(function(elem) {
     elem.addEventListener("change", function(event) {
@@ -510,6 +502,8 @@ function CreateSwiperEvents() {
 const breakpointSwiperEvents = window.matchMedia( '(max-width:320px)' );
 
 const breakpointBooksSpoiler = window.matchMedia( '(max-width:670px)' );
+
+const breakpointScrollToArticle = window.matchMedia( '(max-width:320px)' );
 
 function CheckSwiperEvents(isOn) {
   if(isOn === true) {
