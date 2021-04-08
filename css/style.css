@@ -2804,6 +2804,10 @@ h1 {
     width: 100%;
   }
 
+  .books-container {
+    padding-left: 30px;
+  }
+
   .books-filter-categories {
     display: flex;
     flex-direction: column;
@@ -2862,6 +2866,76 @@ h1 {
     padding-top: 2px;
     padding-bottom: 4px;
     border-bottom: 1px solid;
+  }
+
+  .books-swiper-pagination {
+    display: none;
+  }
+
+  .books-swiper-btn {
+    display: none;
+  }
+
+  .books-swiper {
+    margin-right: 0px;
+    padding-left: 0px;
+  }
+
+  .books-swiper-container {
+    margin-top: 47px;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .books-swiper-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .books-swiper-slide {
+    width: fit-content;
+    padding-bottom: 159px;
+  }
+
+  .books-swiper-slide-card {
+    margin-left: 0px;
+  }
+
+  .books-card-details {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .books-card-details-title {
+    top: 8px;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .books-card-details-author {
+    top: 24px;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .books-card-details-price {
+    top: 42px;
+    left: 0;
+    right: auto;
+    font-size: 11px;
+  }
+
+  .books-card-details-button {
+    top: 64px;
+  }
+
+  .books-card-details-button-btn {
+    padding: 9px 34px 10px 34px;
   }
 
 
@@ -3180,6 +3254,7 @@ h1 {
   .books-container {
     padding-top: 47px;
     padding-left: 9px;
+    padding-right: 9px;
   }
 
   .section-books-heading {
@@ -3193,6 +3268,12 @@ h1 {
   .categories-list-item {
     margin-left: 3px;
   }
+
+  .books-filter-price {
+    margin-top: 57px;
+    margin-left: 5px;
+  }
+
 
 
 

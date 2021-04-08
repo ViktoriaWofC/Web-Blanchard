@@ -474,7 +474,7 @@ function CreateSwiperBooks() {
   });
 }
 
-const breakpointSwiperBooks = window.matchMedia( '(max-width:600px)' );
+const breakpointSwiperBooks = window.matchMedia( '(max-width:670px)' );
 
 function CheckSwiperBooks(isOff) {
   if(isOff === true) {
