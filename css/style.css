@@ -1902,7 +1902,6 @@ h1 {
 
 .contacts-map {
   width: 1238px;
-  /* height: 682px; */
   height: auto;
   overflow: hidden;
 }
@@ -1934,6 +1933,10 @@ h1 {
   font-size: 16px;
   line-height: 32px;
   font-weight: normal;
+}
+
+.contacts-details-address-320 {
+  display: none;
 }
 
 .contacts-details-form {
@@ -2808,6 +2811,19 @@ h1 {
     width: 100%;
   }
 
+  .contacts-details {
+    align-items: center;
+    min-width: unset;
+    padding-top: 70px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .details-form-input {
+    width: 50vw;
+    min-width: 290px;
+  }
+
   .books-container {
     padding-left: 30px;
     padding-bottom: 1px;
@@ -3306,6 +3322,86 @@ h1 {
   .swiper-button-next-projects {
     right: 8px;
   }
+
+  .contacts {
+    margin-top: 17px;
+  }
+
+  .contacts-container {
+    padding-top: 46px;
+    padding-left: 13px;
+  }
+
+  .contacts-details-address-320 {
+    display: block;
+    padding-left: 13px;
+    padding-bottom: 19px;
+  }
+
+  .address-320-general {
+    font-size: 17.5px;
+    line-height: 25px;
+    font-weight: 600;
+  }
+
+  .address-320-description {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: normal;
+  }
+
+  .contacts-details {
+    padding-top: 0px;
+  }
+
+  .contacts-details-address {
+    display: none;
+  }
+
+  .contacts-details-form {
+    margin-top: 19px;
+  }
+
+  .details-form-heading {
+    margin-bottom: 17px;
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .details-form-input {
+    margin-bottom: 20px;
+  }
+
+  .details-form-btn-text {
+    padding: 10px 33px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .contacts-details-social {
+    margin-top: 13px;
+    width: 100%;
+  }
+
+  .details-social-heading {
+    font-size: 17.8px;
+    line-height: 32px;
+  }
+
+  .details-social-icons {
+    margin-top: 8px;
+  }
+
+  .details-social-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .details-social-icon:not(:last-child) {
+    margin-right: 22px;
+  }
+
+
 
 
 
